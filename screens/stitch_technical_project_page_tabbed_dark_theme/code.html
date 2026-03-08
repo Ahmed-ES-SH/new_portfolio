@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0a0a",
+                        "terminal-accent": "#00f2ff",
+                        "terminal-border": "#1a3a4a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "2px", "xl": "4px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .grid-bg {
+            background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                              linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .scanline {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+        }
+        .terminal-module {
+            border: 1px solid #1a3a4a;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 font-display grid-bg min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between border-b border-terminal-border bg-background-dark/90 px-6 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-terminal-accent">
+<div class="size-6">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h2 class="font-mono text-xl font-bold leading-tight tracking-wider uppercase">
+                [SYS_PROJECT_MODULE_V.08]
+            </h2>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-none border border-terminal-border h-10 bg-background-dark px-4 hover:bg-terminal-accent/10 hover:border-terminal-accent transition-colors">
+<span class="material-symbols-outlined text-terminal-accent">terminal</span>
+<span class="ml-2 font-mono text-xs uppercase text-slate-400">Execute</span>
+</button>
+<button class="flex items-center justify-center rounded-none border border-terminal-border h-10 bg-background-dark px-4 hover:bg-terminal-accent/10 hover:border-terminal-accent transition-colors">
+<span class="material-symbols-outlined text-terminal-accent">share</span>
+<span class="ml-2 font-mono text-xs uppercase text-slate-400">Distribute</span>
+</button>
+<button class="flex items-center justify-center rounded-none border border-terminal-border h-10 bg-background-dark px-3 hover:bg-terminal-accent/10">
+<span class="material-symbols-outlined text-terminal-accent">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-6 py-8 flex flex-col gap-8 max-w-[1200px] mx-auto w-full">
+<section class="terminal-module p-1 relative overflow-hidden">
+<div class="h-80 w-full bg-slate-900 relative group">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="Futuristic neon city skyline background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFu5cvCU_9Dg-qySBcvI5NOfMiQD_IbW2vwEi7tFx1dm-1-Fy8iAhZ0NAI9QNdEyEZF2eZuXfuh_GMuhrKGe7d53MDaGmxE6kgp_nIsJlKlO3AqqZigAeFRLbdY-ejG-aDOEvgGX3lOH6VbqPiByivJm3lIN7gpO0Os3nWAXCJq10ucIkLIqLKWjG7qCvWRBOsf2DJkpiWdzd4szb32IHPEhydj4L34uwtsoESN2hBZe2GRdvVTML7LlbD5i7GRNAIwyHMJ-lkbfM');"></div>
+<div class="scanline absolute inset-0"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex flex-col gap-4">
+<div>
+<h1 class="font-mono text-4xl font-bold text-white tracking-tighter drop-shadow-md">
+<span class="text-terminal-accent">&gt;</span> PROJECT_NEON_VALKYRIE
+                        </h1>
+<p class="font-mono text-terminal-accent/70 text-sm mt-2 uppercase tracking-widest">Sector-7 Deployment // Tactical Interface</p>
+</div>
+<div class="flex gap-4 mt-2">
+<button class="px-6 py-2 bg-terminal-accent text-black font-mono font-bold text-sm neon-glow hover:bg-white transition-all uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+                            [ACTIVATE_DEMO]
+                        </button>
+<button class="px-6 py-2 border-2 border-terminal-accent text-terminal-accent font-mono font-bold text-sm hover:bg-terminal-accent/20 transition-all uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">code</span>
+                            [ACCESS_SOURCE]
+                        </button>
+</div>
+</div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="px-2 py-1 bg-primary text-white font-mono text-xs font-bold uppercase">Critical</span>
+<span class="px-2 py-1 bg-terminal-accent text-black font-mono text-xs font-bold uppercase">Online</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="terminal-module relative">
+<div class="bg-terminal-border px-4 py-1 flex justify-between items-center">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[MODULE_INFO]</h3>
+<div class="flex gap-1">
+<div class="size-2 bg-terminal-accent/50"></div>
+<div class="size-2 bg-terminal-accent/30"></div>
+</div>
+</div>
+<div class="p-6">
+<p class="font-display text-slate-300 leading-relaxed">
+<span class="text-terminal-accent font-mono">INITIALIZING...</span> High-density data visualization and neural link synchronization. This module governs the tactical deployment of encrypted assets within the sector. Built for sub-millisecond response times in high-interference environments.
+                        </p>
+<div class="mt-8 border-t border-terminal-border/30 pt-6">
+<h4 class="font-mono text-[10px] text-terminal-accent uppercase mb-4 tracking-[0.2em]">[SYSTEM_DEPENDENCIES]</h4>
+<div class="grid grid-cols-2 gap-y-2 gap-x-8 font-mono text-xs">
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">CORE_RUNTIME</span>
+<span class="text-white">NODE_V20_LTS</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">STYLE_PROCESSOR</span>
+<span class="text-white">POST_CSS_V8</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">DATA_STRUCTURE</span>
+<span class="text-white">GRAPHQL_QUERY</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">NEURAL_BINDING</span>
+<span class="text-white">REACT_V18.2</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">SECURITY_LAYER</span>
+<span class="text-white">OAUTH_SEC_2.0</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/20 pb-1">
+<span class="text-slate-500">ASSET_INDEX</span>
+<span class="text-white">REDIS_CACHE_V7</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex flex-wrap gap-4 border-t border-terminal-border pt-6">
+<div class="flex-1 min-w-[120px]">
+<p class="font-mono text-[10px] text-slate-500 uppercase">Version</p>
+<p class="font-mono text-sm text-white">8.4.2-STABLE</p>
+</div>
+<div class="flex-1 min-w-[120px]">
+<p class="font-mono text-[10px] text-slate-500 uppercase">Latency</p>
+<p class="font-mono text-sm text-white">0.04ms</p>
+</div>
+<div class="flex-1 min-w-[120px]">
+<p class="font-mono text-[10px] text-slate-500 uppercase">Uptime</p>
+<p class="font-mono text-sm text-white">99.999%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="terminal-module overflow-hidden">
+<div class="bg-terminal-border px-4 py-1 flex justify-between items-center">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[VISUAL_RECON]</h3>
+<span class="font-mono text-[10px] text-slate-400">FRAME_ID: 401-403</span>
+</div>
+<div class="relative w-full aspect-video bg-black flex flex-col">
+<div class="relative flex-1 group overflow-hidden border-b border-terminal-border">
+<img alt="Active Recon View" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1EgG0H4MjitzvPUUobTHCqQ31OG2dO30hNcVggnHPQWrjEZr-911kXpXo7rDa3dAv80HzUkOO6eSiCXvlsI9L5jFJzes1lqDA4XzvATOaRAKegpNN-Ltxf0dvWEXp6QxyPiuaXpWv0e1IxQekqYLkRhLM0Kj4XBlX4uxcj4Q2leWNVWD8ri8_JgKnnlBmcLT1s5_iFrMPlYe9JnM4It_pCTu7PPqfIFLWgRLpBr4uTVMrHV-HTIHhskTKNCCJeq8sV0YFISxUyXE"/>
+<div class="scanline absolute inset-0"></div>
+<div class="absolute top-4 left-4 bg-black/80 border border-terminal-accent px-2 py-1">
+<p class="font-mono text-[10px] text-terminal-accent animate-pulse">REC // LIVE_FEED_01</p>
+</div>
+</div>
+<div class="bg-background-dark/95 p-3 flex items-center justify-between font-mono text-xs">
+<div class="flex items-center gap-2">
+<span class="text-terminal-accent">&gt;</span>
+<button class="text-slate-400 hover:text-terminal-accent transition-colors uppercase cursor-pointer">[ LOAD_PREV_IMG ]</button>
+<span class="text-slate-700">|</span>
+<button class="text-white hover:text-terminal-accent transition-colors uppercase cursor-pointer">LOAD_NEXT_IMG</button>
+</div>
+<div class="flex gap-2">
+<div class="size-2 bg-terminal-accent"></div>
+<div class="size-2 bg-terminal-border"></div>
+<div class="size-2 bg-terminal-border"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="terminal-module">
+<div class="bg-terminal-border px-4 py-1">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[FEATURE_SET]</h3>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">security</span>
+<div>
+<h4 class="font-mono text-sm font-bold text-white uppercase">Encrypted Core</h4>
+<p class="text-xs text-slate-400 mt-1">AES-512 bit neural encryption for all data transit.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<div>
+<h4 class="font-mono text-sm font-bold text-white uppercase">Overclock Capability</h4>
+<p class="text-xs text-slate-400 mt-1">Bypass hardware limits for emergency computations.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">hub</span>
+<div>
+<h4 class="font-mono text-sm font-bold text-white uppercase">Mesh Sync</h4>
+<p class="text-xs text-slate-400 mt-1">Autonomous synchronization with local network nodes.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<div>
+<h4 class="font-mono text-sm font-bold text-white uppercase">Ghost Mode</h4>
+<p class="text-xs text-slate-400 mt-1">Deep-packet stealth masking for undetected ops.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="terminal-module">
+<div class="bg-terminal-border px-4 py-1">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[TECH_STACK]</h3>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-center group">
+<span class="font-mono text-xs text-slate-400 group-hover:text-terminal-accent transition-colors">RUST_ENGINE</span>
+<div class="h-1 w-24 bg-slate-800 relative">
+<div class="absolute left-0 top-0 h-full bg-terminal-accent neon-glow" style="width: 85%;"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group">
+<span class="font-mono text-xs text-slate-400 group-hover:text-terminal-accent transition-colors">NEURAL_CSS</span>
+<div class="h-1 w-24 bg-slate-800 relative">
+<div class="absolute left-0 top-0 h-full bg-terminal-accent neon-glow" style="width: 95%;"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group">
+<span class="font-mono text-xs text-slate-400 group-hover:text-terminal-accent transition-colors">QUANTUM_API</span>
+<div class="h-1 w-24 bg-slate-800 relative">
+<div class="absolute left-0 top-0 h-full bg-terminal-accent neon-glow" style="width: 60%;"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group">
+<span class="font-mono text-xs text-slate-400 group-hover:text-terminal-accent transition-colors">PROTO_SYNC</span>
+<div class="h-1 w-24 bg-slate-800 relative">
+<div class="absolute left-0 top-0 h-full bg-terminal-accent neon-glow" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="terminal-module flex-1">
+<div class="bg-terminal-border px-4 py-1">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[SYSTEM_LOG]</h3>
+</div>
+<div class="p-4 font-mono text-[10px] text-slate-500 overflow-y-auto max-h-64 space-y-2">
+<p><span class="text-terminal-accent/50">[12:04:22]</span> AUTH_SUCCESS: USER_ROOT_404</p>
+<p><span class="text-terminal-accent/50">[12:04:25]</span> PULLING ASSETS FROM SECTOR_7...</p>
+<p><span class="text-terminal-accent/50">[12:05:01]</span> CACHE_HIT: NEON_VALKYRIE_V8</p>
+<p><span class="text-primary/50">[12:05:44]</span> WARNING: PACKET LOSS IN SUB-GRID B</p>
+<p><span class="text-terminal-accent/50">[12:06:12]</span> RE-ESTABLISHING NEURAL LINK...</p>
+<p><span class="text-terminal-accent/50">[12:06:15]</span> LINK_STABLE. PROCEED.</p>
+<div class="w-1 h-3 bg-terminal-accent animate-pulse inline-block"></div>
+</div>
+</div><div class="terminal-module">
+<div class="bg-terminal-border px-4 py-1">
+<h3 class="font-mono text-xs font-bold text-terminal-accent uppercase">[DEPLOYMENT_NODE]</h3>
+</div>
+<div class="relative h-48 w-full bg-background-dark overflow-hidden">
+<img alt="Satellite map view of industrial port district" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw5rjTROe3SDqSxXGSjNQhqh0RtWIH4Zm-Xq58YRG5S7NK5wVR3MHUXtB_UtFdY8Xmym-QH8ax7g8kTFJou7SmpQ2droXaTefVniJX2hVasyqntm_FNxOQIP7FNLGIVth0ved2TxqH6MOzuxPhK7Jt6qSE3qeTdHOxZJSZf_bmPyZWGXDxJOB7kUL-yn2EwzNHaLFwbEjt-cu4F31uttm26uQhauBnmWw72pOgj7gLd2KwyyODBLOFLSK8XTJ2qTozlarFYiSOjQs"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-24 rounded-full border border-terminal-accent/30 flex items-center justify-center animate-pulse">
+<div class="size-4 bg-terminal-accent rounded-full shadow-[0_0_15px_rgba(0,242,255,0.8)]"></div>
+</div>
+</div>
+<div class="absolute bottom-2 left-2 bg-background-dark/80 px-2 py-1 border border-terminal-accent/20">
+<p class="font-mono text-[9px] text-terminal-accent">REGION: JP-EAST-04</p>
+</div>
+</div>
+<div class="p-4 space-y-2 font-mono text-[10px]">
+<div class="flex justify-between border-b border-terminal-border/30 pb-1">
+<span class="text-slate-500 uppercase">Coordinations</span>
+<span class="text-white">35.68N, 139.76E</span>
+</div>
+<div class="flex justify-between border-b border-terminal-border/30 pb-1">
+<span class="text-slate-500 uppercase">Deployment</span>
+<span class="text-white">AUG_2024</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500 uppercase">Encryption</span>
+<span class="text-terminal-accent font-bold">AES-4096_VALID</span>
+</div>
+</div>
+</div>
+<div class="terminal-module">
+<div class="p-4 flex items-center gap-4">
+<div class="size-12 border border-terminal-accent p-0.5">
+<div class="w-full h-full bg-cover bg-center" data-alt="Avatar of Root User System Architect" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGVXqJ72QpeYy-GBphTZbbVuDVJ2dlURZw4TnI0UJic84jTL3FS-i8_sOfZOSkVhzd5xrpJdVlbRfSkiWCUJZHk9AmyM_RIbbJlvqWPeDYKLWCdTttNGvrWwFXXW2_yKOdyif9D2Ijsl2qTLEQfkLkkxBdXbid_T-tVJqj5kWmn7C1x6dQirkmG-1xZuSwRdzPuaDLBkqPpAHYNyih_gMNZ5gPilNb3dXg3bf3SHx68VZ_5kxsafDulldRL0_NuSxAYZajL_0OHVc');"></div>
+</div>
+<div>
+<h4 class="font-mono text-sm font-bold text-white">ROOT_USER</h4>
+<p class="font-mono text-[10px] text-terminal-accent">SYSTEM_ARCHITECT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-terminal-border bg-background-dark/95 p-2 px-6 flex justify-between items-center text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+<div class="flex gap-4">
+<span>CPU: 12.4%</span>
+<span>MEM: 4.2GB / 32GB</span>
+<span class="text-terminal-accent">SECURE_LINK: ACTIVE</span>
+</div>
+<div>
+            TERMINAL v0.8.4_STABLE_BUILD
+        </div>
+</footer>
+</div>
+</div>
+</body></html>

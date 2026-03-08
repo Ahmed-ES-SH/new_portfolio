@@ -11,13 +11,21 @@
   --foreground: #0f172a;
 
   /* main colors */
-  --primary: #230152;
+  --primary: #00f0ff;
 
   /* State Colors */
   --success: #059669;
   --danger: #dc2626;
   --warning: #d97706;
   --info: #0284c7;
+
+  /* transition colors */
+  --primary-accent: #00f5e4;
+  --tile-size: 64px;
+  --burst-duration: 260ms;
+  --settle-duration: 160ms;
+  --bg-base: #0d0f10;
+  --grid-line: rgba(0, 245, 228, 0.07);
 }
 
 @theme inline {
@@ -39,11 +47,109 @@
   /* fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Cyberpunk / Neon Theme Elements */
+  --color-accent-blue: #00f0ff;
+  --color-grid-blue: rgba(0, 240, 255, 0.2);
+  --color-terminal-accent: #00f2ff;
+  --color-terminal-border: #1a3a4a;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+.cairo-regular {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-mono-thin-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ibm-plex-mono-extralight-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ibm-plex-mono-light-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ibm-plex-mono-regular-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ibm-plex-mono-medium-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ibm-plex-mono-semibold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ibm-plex-mono-bold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
 }
 
 ::-webkit-scrollbar {
@@ -59,19 +165,29 @@ html {
 }
 
 body:lang(ar) {
-  font-family: "Cairo", sans-serif;
+  font-family: "IBM Plex Mono";
   direction: rtl;
 }
 
 body:lang(en) {
-  font-family: "Zalando Sans Expanded", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   direction: ltr;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--tile-size) var(--tile-size);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 button,
@@ -82,6 +198,7 @@ a {
 input,
 textarea {
   outline: none;
+  cursor: text;
 }
 
 button:disabled {
@@ -94,5 +211,153 @@ button:disabled {
 }
 
 /* ////////////////////////////////////////////////////////////// */
-/* End Default Styles */
+/* Hero Section Custom Styles */
 /* ////////////////////////////////////////////////////////////// */
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, var(--color-grid-blue) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, var(--color-grid-blue) 1.5px, transparent 1.5px);
+  background-size: 50px 50px;
+  box-shadow: inset 0 0 100px rgba(0, 240, 255, 0.05);
+}
+
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+}
+
+.neon-border {
+  box-shadow:
+    0 0 15px rgba(0, 240, 255, 0.4),
+    inset 0 0 5px rgba(0, 240, 255, 0.2);
+  border: 1px solid var(--color-accent-blue);
+}
+
+.neon-text,
+.text-glow {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.7);
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-500%);
+  }
+  50% {
+    transform: translateY(500%);
+  }
+  75% {
+    transform: translateY(500%);
+  }
+  100% {
+    transform: translateY(-500%);
+  }
+}
+
+.scanline-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 240, 255, 0.3),
+    transparent
+  );
+  height: 15%;
+  width: 100%;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.scanline {
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+
+.terminal-module {
+  border: 1px solid var(--color-terminal-border);
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  41.99% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.7;
+  }
+  43% {
+    opacity: 0.95;
+  }
+  43.01% {
+    opacity: 1;
+  }
+  47.99% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 0.6;
+  }
+  49% {
+    opacity: 0.9;
+  }
+  49.01% {
+    opacity: 1;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* End Hero Section Custom Styles */
+/* ////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////// */
+/* transition Styles */
+/* ////////////////////////////////////////////////////////////// */
+
+.pixel-flicker {
+  animation: flicker 5s infinite step-end;
+}
+
+.data-stream-segment {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* End transition Styles */
+/* ////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////// */
+/* Components  */
+/* ////////////////////////////////////////////////////////////// */
+
+@layer components {
+  .container-section {
+    @apply px-6 w-full mx-auto 2xl:w-[90%];
+  }
+}

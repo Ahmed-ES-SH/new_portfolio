@@ -1,9 +1,9 @@
-import React from "react";
+import { HeroSection } from "../_components/_home/HeroSection";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div>
-      <div className="home"></div>
+    <div className="relative min-h-screen w-full flex flex-col grid-bg bg-black">
+      <HeroSection />
     </div>
   );
 }
