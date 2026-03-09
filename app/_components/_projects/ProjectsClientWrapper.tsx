@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Project, ProjectCategory } from "@/app/lib/projects";
 import ProjectsHero from "./ProjectsHero";
 import ProjectsStats from "./ProjectsStats";
@@ -16,13 +16,18 @@ export default function ProjectsClientWrapper({
 }: ProjectsClientWrapperProps) {
   const [activeTab, setActiveTab] = useState<ProjectCategory | "all">("all");
 
+  useEffect(() => {
+    // Force scroll to top on mount to prevent the page from starting in the middle
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const filteredProjects =
     activeTab === "all"
       ? initialProjects
       : initialProjects.filter((p) => p.categories.includes(activeTab));
 
   return (
-    <div className="relative mt-8 min-h-screen w-full flex flex-col font-display text-slate-100 overflow-x-hidden">
+    <div className="relative pt-8 min-h-screen w-full flex flex-col font-display text-slate-100 overflow-x-hidden">
       {/* Background Grid - from original design */}
       <div
         className="fixed inset-0 pointer-events-none z-[-1]"

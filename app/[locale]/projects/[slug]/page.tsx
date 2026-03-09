@@ -3,7 +3,6 @@
 import { getServerTranslation } from "@/app/helpers/serverTranslation";
 import { getSharedMetadata } from "@/app/helpers/SharedMetadata";
 import { getProjects } from "@/app/lib/projects";
-import ProjectDetailHero from "@/app/_components/_projectPage/ProjectDetailHero";
 import ProjectModuleInfo from "@/app/_components/_projectPage/ProjectModuleInfo";
 import ProjectFeatureSet from "@/app/_components/_projectPage/ProjectFeatureSet";
 import ProjectTechStack from "@/app/_components/_projectPage/ProjectTechStack";
@@ -11,6 +10,7 @@ import ProjectSystemLog from "@/app/_components/_projectPage/ProjectSystemLog";
 import ProjectDeploymentNode from "@/app/_components/_projectPage/ProjectDeploymentNode";
 import ProjectUserProfile from "@/app/_components/_projectPage/ProjectUserProfile";
 import ProjectCoverSection from "@/app/_components/_projectPage/ProjectCoverSection";
+import ProjectSlider from "@/app/_components/_projectPage/ProjectSlider";
 
 // Static params for build time
 export async function generateStaticParams() {
@@ -74,8 +74,8 @@ export default async function ProjectPage({ params }: any) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Info Column */}
           <div className="lg:col-span-2 flex flex-col gap-8">
+            <ProjectSlider project={project} />
             <ProjectModuleInfo project={project} content={content} />
-            <ProjectDetailHero project={project} />
             <ProjectFeatureSet />
           </div>
 

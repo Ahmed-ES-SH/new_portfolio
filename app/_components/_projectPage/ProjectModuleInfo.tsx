@@ -1,5 +1,6 @@
 "use client";
 
+import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import { useLocale } from "@/app/hooks/useLocale";
 import { Project } from "@/app/lib/projects";
@@ -9,9 +10,24 @@ interface ProjectModuleInfoProps {
   content?: string;
 }
 
-export default function ProjectModuleInfo({ project, content }: ProjectModuleInfoProps) {
+export default function ProjectModuleInfo({
+  project,
+  content,
+}: ProjectModuleInfoProps) {
   const t = useTranslation("projectDetail");
   const locale = useLocale();
+
+  const displayContent = content || project.description[locale];
+
+  // Generate word-by-word sequence
+  const sequence = displayContent
+    ? displayContent.split(" ").reduce((acc: (string | number)[], word, i) => {
+        const prev = i === 0 ? "" : (acc[acc.length - 2] as string) + " ";
+        acc.push(prev + word);
+        acc.push(20); // Delay between words in ms
+        return acc;
+      }, [])
+    : [];
 
   return (
     <div className="terminal-module relative flex-1">
@@ -25,9 +41,20 @@ export default function ProjectModuleInfo({ project, content }: ProjectModuleInf
         </div>
       </div>
       <div className="p-6">
-        <div className="font-display text-slate-300 leading-relaxed whitespace-pre-line">
-          <span className="text-primary font-mono mr-2 block mb-2 underline tracking-widest text-[10px]">INITIALIZING_DETAILED_RECON...</span>
-          {content || project.description[locale]}
+        <div className="font-display text-slate-300 leading-relaxed whitespace-pre-line min-h-[160px]">
+          <span className="text-primary font-mono mr-2 block mb-2 underline tracking-widest text-[10px]">
+            INITIALIZING_DETAILED_RECON...
+          </span>
+          {sequence.length > 0 && (
+            <TypeAnimation
+              key={`${locale}-${displayContent.length}`}
+              sequence={sequence}
+              wrapper="span"
+              cursor={true}
+              repeat={0}
+              className="inline-block"
+            />
+          )}
         </div>
 
         <div className="mt-8 border-t border-terminal-border/30 pt-6">
@@ -43,7 +70,10 @@ export default function ProjectModuleInfo({ project, content }: ProjectModuleInf
                 <span className="text-slate-500 uppercase">
                   {`DEP_0${idx + 1}`}
                 </span>
-                <span className="text-white truncate max-w-[120px]" title={skill}>
+                <span
+                  className="text-white truncate max-w-[120px]"
+                  title={skill}
+                >
                   {skill.toUpperCase()}
                 </span>
               </div>

@@ -49,7 +49,7 @@ export default function ProjectCoverSection({
                 href={project.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 bg-primary text-background-dark font-mono font-bold text-sm neon-glow hover:bg-white transition-all uppercase flex items-center gap-2"
+                className="px-6 py-2 bg-sky-500 text-background-dark hover:text-gray-800 font-mono font-bold text-sm neon-glow hover:bg-primary transition-all uppercase flex items-center gap-2"
               >
                 <span className="material-symbols-outlined text-sm">
                   play_arrow
