@@ -48,7 +48,7 @@ export function AboutSection() {
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-[#00FFCC]/50 transition-all duration-500 group-hover:w-12 group-hover:h-12 group-hover:border-[#00FFCC]" />
 
               <Image
-                src="/about.png"
+                src="/about.webp"
                 alt="Ahmed Ismail"
                 fill
                 sizes="(max-width: 768px) 100vw, 500px"

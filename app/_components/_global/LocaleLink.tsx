@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useLocale } from "@/app/hooks/useLocale";
 import { useSearchParams } from "next/navigation";
-import { ReactNode, useCallback } from "react";
+import { ReactNode, useCallback, Suspense } from "react";
 
 interface LocaleLinkProps {
   children: ReactNode;
@@ -12,7 +12,7 @@ interface LocaleLinkProps {
   onClick?: () => void;
 }
 
-export default function LocaleLink({
+function LocaleLinkInner({
   children,
   className,
   target,
@@ -53,5 +53,24 @@ export default function LocaleLink({
     >
       {children}
     </Link>
+  );
+}
+
+export default function LocaleLink(props: LocaleLinkProps) {
+  return (
+    <Suspense
+      fallback={
+        <a
+          href={props.href}
+          className={`${props.className} block outline-none`}
+          target={props.target}
+          onClick={props.onClick}
+        >
+          {props.children}
+        </a>
+      }
+    >
+      <LocaleLinkInner {...props} />
+    </Suspense>
   );
 }
