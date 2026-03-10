@@ -65,12 +65,12 @@ export default async function ProjectPage({ params }: any) {
   }
 
   return (
-    <div className="relative min-h-screen container-section flex flex-col font-display text-slate-100 overflow-x-hidden mt-24 pb-12">
+    <div className="relative min-h-screen flex flex-col font-display text-slate-100 overflow-x-hidden mt-24 pb-12">
       {/* Background Grid */}
       <div className="fixed inset-0 grid-bg z-[-1]" />
       <div className="fixed inset-0 bg-background-dark/50 pointer-events-none z-[-1]"></div>
 
-      <main className="flex-1 px-6 flex flex-col gap-8 z-10">
+      <main className="flex-1 px-6 max-md:px-2 flex flex-col gap-8 z-10">
         {/*  project cover section + Actions buttons  */}
         <ProjectCoverSection project={project} />
 

@@ -27,7 +27,7 @@ export default function ProjectsClientWrapper({
       : initialProjects.filter((p) => p.categories.includes(activeTab));
 
   return (
-    <div className="relative pt-8 min-h-screen w-full flex flex-col font-display text-slate-100 overflow-x-hidden">
+    <div className="relative pt-8 min-h-screen w-full flex flex-col text-slate-100">
       {/* Background Grid - from original design */}
       <div
         className="fixed inset-0 pointer-events-none z-[-1]"
@@ -41,7 +41,7 @@ export default function ProjectsClientWrapper({
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 container-section mt-20 z-10">
+      <main className="flex-1 container-section max-md:p-2 mt-20 z-10">
         <ProjectsHero />
         <ProjectsStats />
         <ProjectsTabs activeTab={activeTab} setActiveTab={setActiveTab} />

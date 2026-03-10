@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Dispatch, SetStateAction } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -21,7 +21,7 @@ function generateParticles(count: number) {
 interface GlitchImageViewerProps {
   images: string[];
   activeIndex: number;
-  setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
+  setActiveIndex: Dispatch<SetStateAction<number>>;
 }
 
 export default function GlitchImageViewer({
@@ -125,10 +125,30 @@ export default function GlitchImageViewer({
 
               {/* Staggered Glitch Layers — 4 horizontal stripes (on image change) */}
               {[
-                { top: "0%",   height: "25%", delay: 0,    xShift: [-20, 15, -8, 0] },
-                { top: "25%",  height: "25%", delay: 0.1,  xShift: [15, -25, 12, 0] },
-                { top: "50%",  height: "25%", delay: 0.2,  xShift: [-25, 10, -15, 0] },
-                { top: "75%",  height: "25%", delay: 0.3,  xShift: [10, -20, 18, 0] },
+                {
+                  top: "0%",
+                  height: "25%",
+                  delay: 0,
+                  xShift: [-20, 15, -8, 0],
+                },
+                {
+                  top: "25%",
+                  height: "25%",
+                  delay: 0.1,
+                  xShift: [15, -25, 12, 0],
+                },
+                {
+                  top: "50%",
+                  height: "25%",
+                  delay: 0.2,
+                  xShift: [-25, 10, -15, 0],
+                },
+                {
+                  top: "75%",
+                  height: "25%",
+                  delay: 0.3,
+                  xShift: [10, -20, 18, 0],
+                },
               ].map((layer, i) => (
                 <motion.div
                   key={`glitch-layer-${i}`}
@@ -174,9 +194,7 @@ export default function GlitchImageViewer({
         {/* Navigation Arrows */}
         <button
           onClick={() =>
-            setActiveIndex((prev) =>
-              prev > 0 ? prev - 1 : images.length - 1,
-            )
+            setActiveIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1))
           }
           className="absolute left-4 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-black/60 border border-primary/40 text-primary hover:bg-primary hover:text-white transition-all z-20"
         >
@@ -184,9 +202,7 @@ export default function GlitchImageViewer({
         </button>
         <button
           onClick={() =>
-            setActiveIndex((prev) =>
-              prev < images.length - 1 ? prev + 1 : 0,
-            )
+            setActiveIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0))
           }
           className="absolute right-4 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center bg-black/60 border border-primary/40 text-primary hover:bg-primary hover:text-white transition-all z-20"
         >

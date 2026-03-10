@@ -58,7 +58,7 @@ export default function SliderGlitchPopup({
   const portalTarget = document.body;
 
   const content = (
-    <div className="fixed w-full h-screen inset-0 z-9999 flex items-center justify-center p-4 sm:p-8 bg-black/95 grid-bg">
+    <div className="fixed w-full h-screen inset-0 z-9999999 flex items-center justify-center p-4 sm:p-8 bg-black/95 grid-bg">
       <div className="relative w-full max-w-7xl flex flex-col h-full max-h-[90vh] border border-primary/50 bg-background-dark/90 backdrop-blur-md overflow-hidden neon-border">
         <div className="absolute inset-0 pointer-events-none scanline-overlay opacity-20 hidden md:block z-60"></div>
 

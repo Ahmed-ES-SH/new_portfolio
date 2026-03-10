@@ -35,7 +35,7 @@ export default function GlitchSidebar({
   setActiveIndex,
 }: GlitchSidebarProps) {
   return (
-    <div className="w-full lg:w-72 bg-background-dark/50 flex flex-col shrink-0">
+    <div className="w-full lg:w-72 max-lg:hidden bg-background-dark/50 flex flex-col shrink-0">
       {/* Sidebar Header */}
       <div className="p-4 border-b border-primary/20 flex justify-between items-center bg-primary/10 shrink-0">
         <span className="text-xs font-bold text-primary tracking-widest uppercase">
@@ -125,9 +125,7 @@ export default function GlitchSidebar({
       {/* Download Button */}
       <div className="p-4 border-t border-primary/20 bg-primary/5 shrink-0">
         <button className="w-full py-2 bg-primary/20 border border-primary text-primary text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
-          <span className="material-symbols-outlined text-sm">
-            download
-          </span>
+          <span className="material-symbols-outlined text-sm">download</span>
           Download_All
         </button>
       </div>

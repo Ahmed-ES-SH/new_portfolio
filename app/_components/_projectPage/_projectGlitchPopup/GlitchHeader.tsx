@@ -14,7 +14,7 @@ export default function GlitchHeader({ onClose }: GlitchHeaderProps) {
         <span className="font-mono text-primary neon-text tracking-widest text-sm hidden sm:block">
           terminal
         </span>
-        <h2 className="text-primary font-bold tracking-widest text-lg md:text-xl uppercase neon-text">
+        <h2 className="text-primary font-bold tracking-widest text-[10px] md:text-lg lg:text-xl uppercase neon-text">
           PROJECT_DECRYPT // IMAGE_VAULT
         </h2>
       </div>

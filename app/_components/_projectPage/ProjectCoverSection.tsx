@@ -49,7 +49,7 @@ export default function ProjectCoverSection({
                 href={project.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 bg-sky-500 text-background-dark hover:text-gray-800 font-mono font-bold text-sm neon-glow hover:bg-primary transition-all uppercase flex items-center gap-2"
+                className="px-6 py-2 max-md:w-[80%] bg-sky-500 text-background-dark hover:text-gray-800 font-mono font-bold text-sm neon-glow hover:bg-primary transition-all uppercase flex items-center gap-2"
               >
                 <span className="material-symbols-outlined text-sm">
                   play_arrow
@@ -63,7 +63,7 @@ export default function ProjectCoverSection({
                 href={project.linkSourceCode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 border-2 border-primary text-primary font-mono font-bold text-sm hover:bg-primary/20 transition-all uppercase flex items-center gap-2"
+                className="px-6 py-2 max-md:w-[80%]  border-2 border-primary text-primary font-mono font-bold text-sm hover:bg-primary/20 transition-all uppercase flex items-center gap-2"
               >
                 <span className="material-symbols-outlined text-sm">code</span>
                 {t.actions.accessSource}
