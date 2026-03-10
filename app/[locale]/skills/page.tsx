@@ -1,18 +1,36 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   skills,
   frontendSkills,
   backendSkills,
   toolsSkills,
+  aiSkills,
 } from "@/constants/skillsContent";
 import { SkillCard } from "../../_components/_skills/SkillCard";
 import { getServerTranslation } from "@/app/helpers/serverTranslation";
-import SkillsHeroSection from "../../_components/_skills/SkillsHeroSection";
 import { directionMap } from "@/constants/global";
+import SkillsHeroSection from "../../_components/_skills/SkillsHeroSection";
+import SkillsSlider from "@/app/_components/_skills/SkillsSlider";
+import SkillsBackGround from "@/app/_components/_skills/SkillsBackGround";
+import { getSharedMetadata } from "@/app/helpers/SharedMetadata";
 
 type Locale = "en" | "ar";
 
 interface PageProps {
   params: Promise<{ locale: Locale }>;
+}
+
+export async function generateMetadata({ params }: any) {
+  const { locale } = await params;
+  const t = getServerTranslation(locale, "metaSkillsPage");
+
+  const sharedMetadata = getSharedMetadata(t.title, t.description);
+
+  return {
+    title: t.title,
+    description: t.description,
+    ...sharedMetadata,
+  };
 }
 
 export default async function SkillsPage({ params }: PageProps) {
@@ -39,6 +57,11 @@ export default async function SkillsPage({ params }: PageProps) {
       data: mapSkillData(backendSkills),
     },
     {
+      id: "ai",
+      label: t?.tabs?.ai || "AI-Powered Development",
+      data: mapSkillData(aiSkills),
+    },
+    {
       id: "tools",
       label: t?.tabs?.tools || "Tools & Architecture",
       data: mapSkillData(toolsSkills),
@@ -48,8 +71,9 @@ export default async function SkillsPage({ params }: PageProps) {
   return (
     <main
       dir={directionMap[locale]}
-      className="relative min-h-screen flex flex-col bg-black overflow-hidden"
+      className="relative min-h-screen  flex flex-col bg-black/70 overflow-hidden"
     >
+      <SkillsBackGround />
       {/* Background Grids and Overlays (Consistent with SkillsSection) */}
       <div
         className="absolute inset-0 z-0"
@@ -63,7 +87,7 @@ export default async function SkillsPage({ params }: PageProps) {
       <div className="absolute inset-0 scanline-overlay z-0" />
 
       {/* Hero Section */}
-      <div className="pt-32 pb-12">
+      <div className="pt-32 pb-8">
         <SkillsHeroSection t={t} />
       </div>
 
@@ -99,6 +123,7 @@ export default async function SkillsPage({ params }: PageProps) {
           </section>
         ))}
       </div>
+      <SkillsSlider />
     </main>
   );
 }

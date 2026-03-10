@@ -1,4 +1,29 @@
 {
+  "metaHomePage": {
+    "title": "Ahmed Ismail | Full Stack Developer",
+    "description": "Ahmed Ismail portfolio. Full-stack developer building scalable platforms using Next.js, Laravel, and AI-accelerated development workflows."
+  },
+
+  "metaSkillsPage": {
+    "title": "Ahmed Ismail | Technical Skills",
+    "description": "Overview of Ahmed Ismail's technical skills including full-stack development, system architecture, AI-driven development workflows, Next.js, Laravel, and modern engineering practices."
+  },
+
+  "metaExplainPage": {
+    "title": "Ahmed Ismail | Development Workflow",
+    "description": "Inside Ahmed Ismail's AI-accelerated development workflow including project planning, spec-driven execution, terminal-based AI development, and automated code review."
+  },
+
+  "metaAboutPage": {
+    "title": "Ahmed Ismail | About",
+    "description": "Learn more about Ahmed Ismail, a full-stack developer focused on building scalable platforms, structured systems, and performance-oriented web applications."
+  },
+
+  "metaProjectsPage": {
+    "title": "Ahmed Ismail | Projects",
+    "description": "Explore projects built by Ahmed Ismail including modern web platforms, scalable systems, and real-world applications developed with Next.js and Laravel."
+  },
+
   "metaProjectPage": {
     "title": "Ahmed Ismail | Project | ",
     "description": "Ahmed Ismail | Project | "
@@ -18,8 +43,8 @@
       "subtitlePrimary": "Full-Stack Developer crafting high-performance apps with",
       "subtitleHighlight": "Next.js, Laravel, and NestJS.",
       "subtitleSecondary": "Bridging modern interfaces with secure, scalable infrastructures.",
-      "badge1": "Best Quality",
-      "badge2": "Responsive Design",
+      "badge1": "CHECK_SKILLS",
+      "badge2": "CHECK_PROJECTS",
       "stats": {
         "reliability": {
           "value": "99.9%",
@@ -46,12 +71,16 @@
       }
     },
     "skills": {
-      "title": "TECHNICAL SKILLS",
-      "description": "A comprehensive overview of my technological stack across the development lifecycle. Modular architecture, performance-first methodologies, and scalable integration patterns.",
+      "title": "AI-Driven Development Workflow",
+      "description": "A structured development methodology that leverages AI agents to accelerate the Software Development Lifecycle. I design Spec-driven execution plans, configure AI agents with project-specific skills, and operate the entire development cycle from the terminal using specialized AI CLI tools. Tasks are executed through structured specifications instead of random code generation, while automated review systems ensure quality and standards compliance. My role remains central in validating results, solving complex problems, and refining implementations. AI is not a replacement for my engineering skills — it is a force multiplier that amplifies productivity and development speed.",
+      "explain": "EXPLAIN",
+      "readMore": "READ MORE",
+      "readLess": "READ LESS",
       "tabs": {
         "frontend": "Frontend",
-        "backend": "Backend & Infrastructure",
-        "tools": "Tools & Architecture"
+        "backend": "Backend",
+        "tools": "Tools & Architecture",
+        "ai": "AI-Powered Development"
       }
     }
   },
@@ -59,10 +88,11 @@
     "navbar": {
       "name": "Ahmed Ismail",
       "links": {
-        "home": "System.Home",
-        "projects": "System.Projects",
-        "log": "System.Log",
-        "skills": "System.Skills"
+        "home": "./Home",
+        "projects": "./Projects",
+        "log": "./Log",
+        "skills": "./Skills",
+        "explain": "./Workflow"
       },
       "cta": "Initialize Contact"
     },
@@ -70,7 +100,7 @@
       "github": "GitHub // Repo",
       "linkedin": "LinkedIn // Connect",
       "twitter": "Twitter // Feed",
-      "copyright": "© 2024 Ahmed Ismail. Engineered for high performance systems."
+      "copyright": "Ahmed Ismail. Engineered for high performance systems."
     }
   },
   "about": {
@@ -94,12 +124,38 @@
     "statusScan": "Scanning regional sectors for optimized interface paradigms...",
     "bio": {
       "name": "AHMED ISMAIL",
-      "description": "Operating at the intersection of heavy industrial logic and fluid digital aesthetics. I build complex systems for high-stakes environments, ensuring data integrity through structural UI protocols and immersive human-machine interaction layers."
+      "description": "Full-stack developer focused on building scalable platforms and real-world digital systems. I design and implement robust architectures using modern technologies such as Next.js and Laravel , Express.js , Nest.js, while leveraging AI tools to accelerate the software development lifecycle. My work combines clean engineering practices, performance-oriented design, and structured development workflows to transform complex ideas into reliable products."
     },
     "techStack": {
       "title": "Tech_Stack_V.2",
       "encryption": "ENCRYPTION: AES-256",
       "signature": "SIGNATURE: VALIDATED"
+    },
+    "header": {
+      "initializeCv": "Initialize_CV"
+    },
+    "sidebarLeft": {
+      "networkStatus": "NETWORK_STATUS_FEED",
+      "bandwidthUsage": "BANDWIDTH_USAGE"
+    },
+    "sidebarRight": {
+      "specializedModules": "Specialized_Modules",
+      "liveTelemetry": "Live_Telemetry",
+      "syncRate": "SYNC_RATE",
+      "gridCoord": "GRID_COORD"
+    },
+    "hero": {
+      "reconMission": "[RECON_MISSION]",
+      "establishLink": "ESTABLISH_LINK",
+      "subId": "SUB_ID: ALEX_REED_01",
+      "role": "Full Stack Developer"
+    },
+    "footer": {
+      "currentSector": "Current_Sector",
+      "sectorValue": "SAN_FRANCISCO_HUB_01",
+      "kernelVersion": "Kernel_Version",
+      "kernelValue": "OS_VER_8.1.1.0",
+      "systemClock": "System_Clock"
     }
   },
   "projects": {
@@ -127,10 +183,10 @@
       }
     },
     "tabs": {
-      "all": "CORE_MODULES",
-      "frontend": "NEURAL_NETWORKS",
-      "backend": "QUANTUM_SIM",
-      "fullstack": "CYPHER_LOGIC"
+      "all": "ALL_MODULES",
+      "frontend": "GET_FRONTEND",
+      "backend": "GET_BACKEND",
+      "fullstack": "GET_FULLSTACK"
     },
     "card": {
       "latest": "LATEST",
@@ -180,6 +236,61 @@
       "coordinations": "Coordinations",
       "deploymentDate": "Deployment",
       "encryption": "Encryption"
+    }
+  },
+  "explain": {
+    "hero": {
+      "title": "AUTOMATED ENGINEERING",
+      "version": "V2.4",
+      "subtitle": "Spec-driven execution & automated development pipelines. Bridging the gap between high-level rationale and binary precision."
+    },
+    "rationale": {
+      "sectionNum": "01",
+      "sectionTitle": "RATIONALE & PLANNING",
+      "sectionSubtitle": "Groups the preparatory work that defines scope, success criteria, and the agent's role.",
+      "items": {
+        "planning": {
+          "title": "Project Understanding & Task Planning",
+          "desc": "Analyze project requirements and break down work into clear tasks, then build a structured execution plan using Spec Kits that include tasks, rules, and acceptance criteria that the AI Agent will follow."
+        },
+        "execution": {
+          "title": "Spec-Driven Execution",
+          "desc": "Execute tasks according to the plan defined in the Spec Kit so that the AI Agent works in structured steps instead of generating random code."
+        },
+        "agentSetup": {
+          "title": "AI Agent Setup & Skill Configuration",
+          "desc": "Equip the AI Agent with the skills appropriate to the project nature and define the tools and capabilities it needs to perform tasks efficiently."
+        }
+      }
+    },
+    "terminal": {
+      "sectionNum": "02",
+      "sectionTitle": "TERMINAL-DRIVEN DEVELOPMENT",
+      "pipeline": {
+        "title": "CODE FLOW PIPELINE",
+        "desc": "Continuous delivery of high-quality code through automated review hooks. Every line is validated against security, performance, and style protocols before it ever touches production.",
+        "points": [
+          "Terminal-Driven AI Development",
+          "Automated Code Review (Rabbit Engine)"
+        ]
+      },
+      "cli": {
+        "desc": "Run and manage the development cycle using AI tools dedicated to the CLI and work within the terminal, such as Cloud, to execute programming tasks, generate code, and accelerate the build process."
+      }
+    },
+    "human": {
+      "sectionNum": "03",
+      "sectionTitle": "HUMAN OVERSIGHT & IDENTITY",
+      "sectionSubtitle": "Emphasizes human judgment, domain expertise, and absolute ownership over the final output.",
+      "validation": {
+        "title": "Human Validation & Problem Solving",
+        "quote": "\"Reviewing logic isn't just about catching bugs; it's about ensuring the architectural vision remains cohesive and fine-tuning implementation for scale.\"",
+        "desc": "Manually reviewing results, understanding code logic, addressing complex issues the AI agent might encounter, and fine-tuning implementation to achieve true productivity."
+      },
+      "whoiam": {
+        "title": "Who I Am (Developer Behind the Workflow)",
+        "desc": "These tools are not a replacement for my programming skills, but rather a means to increase productivity. I am a developer capable of writing code and possessing a deep understanding of systems. I use AI as an accelerator for the development process, not as a substitute for genuine programming expertise."
+      }
     }
   }
 }

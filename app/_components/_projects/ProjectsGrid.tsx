@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 import ProjectCard from "./ProjectCard";
 import { AnimatePresence, motion } from "framer-motion";
 

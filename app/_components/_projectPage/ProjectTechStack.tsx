@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "@/app/hooks/useTranslation";
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 
 interface ProjectTechStackProps {
   project: Project;

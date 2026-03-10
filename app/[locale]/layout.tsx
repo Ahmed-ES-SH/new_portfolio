@@ -6,9 +6,27 @@ import { Footer } from "@/app/_components/_global/Footer";
 import { CustomCursor } from "@/app/_components/_global/CustomCursor";
 import PixelTransitionLayout from "../_components/_global/LayoutTransition";
 import { VariablesProvider } from "../context/VariablesContext";
+import TerminalBox from "../_components/_global/TerminalBox";
+import MobileMenu from "../_components/_global/MobileMenu";
+import { getServerTranslation } from "../helpers/serverTranslation";
+import { getSharedMetadata } from "../helpers/SharedMetadata";
+
 interface RootLayoutProps {
   children: ReactNode;
   params: any;
+}
+
+export async function generateMetadata({ params }: any) {
+  const { locale } = await params;
+  const t = getServerTranslation(locale, "metaHomePage");
+
+  const sharedMetadata = getSharedMetadata(t.title, t.description);
+
+  return {
+    title: t.title,
+    description: t.description,
+    ...sharedMetadata,
+  };
 }
 
 export default async function RootLayout({
@@ -31,12 +49,14 @@ export default async function RootLayout({
         />
       </head>
       <body className={`antialiased`}>
-        <CustomCursor />
-        <Navbar />
         <VariablesProvider>
+          <CustomCursor />
+          <Navbar />
+          <MobileMenu />
           <PixelTransitionLayout>{children}</PixelTransitionLayout>
+          <TerminalBox />
+          <Footer />
         </VariablesProvider>
-        <Footer />
       </body>
     </html>
   );

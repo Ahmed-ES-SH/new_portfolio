@@ -54,12 +54,12 @@ export default function GridTransition({
                 el.style.opacity = "0";
                 completed++;
                 if (completed >= grid.total) onComplete();
-              }, 100); // Increased from 160
-            }, 110); // Increased from 130
+              }, 100); // decreased from 160
+            }, 110); // decreased from 130
           }
         },
         (i / 25) * 40,
-      ); // Slower stagger logic (Increased from 40/20)
+      ); // Slower stagger logic (decreased from 40/20)
     });
   }, [active, grid.total, onComplete]);
 
@@ -76,6 +76,7 @@ export default function GridTransition({
         gridTemplateColumns: `repeat(${grid.cols}, ${tilePx}px)`,
         overflow: "hidden",
       }}
+      className="z-9999999 pointer-events-none w-full h-screen"
     >
       {Array.from({ length: grid.total }).map((_, i) => (
         <div

@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "@/app/hooks/useLocale";
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";

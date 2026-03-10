@@ -1,5 +1,5 @@
 "use client";
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 import { useLocale } from "@/app/hooks/useLocale";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import Image from "next/image";

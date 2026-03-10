@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import AnimateText from "./AnimateText";
+import LocaleLink from "../_global/LocaleLink";
 
 export function HeroSection() {
   const { hero } = useTranslation("home");
@@ -38,12 +39,18 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-wrap gap-4 sm:gap-6">
-            <button className="neon-border bg-(--color-accent-blue) text-black px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-transparent hover:text-(--color-accent-blue) transition-all duration-300">
+            <LocaleLink
+              href="/skills"
+              className="neon-border bg-(--color-accent-blue) text-black px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-transparent hover:text-(--color-accent-blue) transition-all duration-300"
+            >
               {hero.badge1}
-            </button>
-            <button className="neon-border bg-transparent text-(--color-accent-blue) px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-(--color-accent-blue)/10 transition-all duration-300">
+            </LocaleLink>
+            <LocaleLink
+              href="/projects"
+              className="neon-border bg-transparent text-(--color-accent-blue) px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-(--color-accent-blue)/10 transition-all duration-300"
+            >
               {hero.badge2}
-            </button>
+            </LocaleLink>
           </div>
         </div>
 

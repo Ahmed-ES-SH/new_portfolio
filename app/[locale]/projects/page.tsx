@@ -1,12 +1,21 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getProjects } from "@/app/lib/projects";
 import ProjectsClientWrapper from "@/app/_components/_projects/ProjectsClientWrapper";
-import { Metadata } from "next";
+import { getServerTranslation } from "@/app/helpers/serverTranslation";
+import { getSharedMetadata } from "@/app/helpers/SharedMetadata";
 
-export const metadata: Metadata = {
-  title: "Ahmed Ismail | Projects Archive",
-  description:
-    "Central repository for high-priority experimental system modules. Execute with caution.",
-};
+export async function generateMetadata({ params }: any) {
+  const { locale } = await params;
+  const t = getServerTranslation(locale, "metaProjectsPage");
+
+  const sharedMetadata = getSharedMetadata(t.title, t.description);
+
+  return {
+    title: t.title,
+    description: t.description,
+    ...sharedMetadata,
+  };
+}
 
 export default async function ProjectsPage() {
   const projects = await getProjects();

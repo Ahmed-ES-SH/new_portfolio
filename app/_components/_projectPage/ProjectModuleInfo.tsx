@@ -3,7 +3,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "@/app/hooks/useTranslation";
 import { useLocale } from "@/app/hooks/useLocale";
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 
 interface ProjectModuleInfoProps {
   project: Project;

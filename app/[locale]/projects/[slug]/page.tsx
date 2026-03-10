@@ -29,13 +29,16 @@ export async function generateMetadata({ params }: any) {
   if (!project) return getSharedMetadata("", "");
 
   const loc = locale as "en" | "ar";
+
+  const sharedMetadata = getSharedMetadata(
+    `${t.title}${project.title[loc]}`,
+    `${t.description}${project.description[loc]}`,
+  );
+
   return {
     title: `${t.title}${project.title[loc]}`,
     description: `${t.description}${project.description[loc]}`,
-    ...getSharedMetadata(
-      `${t.title}${project.title[loc]}`,
-      `${t.description}${project.description[loc]}`,
-    ),
+    ...sharedMetadata,
   };
 }
 

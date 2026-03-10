@@ -358,6 +358,6 @@ button:disabled {
 
 @layer components {
   .container-section {
-    @apply px-6 w-full mx-auto 2xl:w-[90%];
+    @apply px-6 w-[98%] mx-auto 2xl:w-[90%];
   }
 }

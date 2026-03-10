@@ -21,7 +21,7 @@ export function CustomCursor() {
     <>
       {/* The main solid dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-9999 mix-blend-exclusion"
+        className="hidden md:block fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-9999 mix-blend-exclusion"
         animate={{
           x: x - 4, // center the dot (w-2 is 8px, half is 4px)
           y: y - 4,
@@ -36,7 +36,7 @@ export function CustomCursor() {
 
       {/* The trailing neon ring */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 shadow-[0_0_15px_rgba(0,240,255,0.4)] border border-[var(--color-accent-blue)] rounded-full pointer-events-none z-[9998]"
+        className="hidden md:block fixed top-0 left-0 w-10 h-10 shadow-[0_0_15px_rgba(0,240,255,0.4)] border border-[var(--color-accent-blue)] rounded-full pointer-events-none z-[9998]"
         animate={{
           x: x - 20, // center the outer ring (w-10 is 40px, half is 20px)
           y: y - 20,

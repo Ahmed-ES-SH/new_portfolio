@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/app/hooks/useLocale";
 import { useTranslation } from "@/app/hooks/useTranslation";
-import { Project } from "@/app/lib/projects";
+import { Project } from "@/app/lib/projects-data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Project, ProjectCategory } from "@/app/lib/projects";
+import { Project, ProjectCategory } from "@/app/lib/projects-data";
 import ProjectsHero from "./ProjectsHero";
 import ProjectsStats from "./ProjectsStats";
 import ProjectsTabs from "./ProjectsTabs";

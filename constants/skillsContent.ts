@@ -189,6 +189,54 @@ export const skills = [
       en: "Experienced in Bootstrap for fast, responsive design with a comprehensive CSS framework.",
     },
   },
+  {
+    icon: "/icons/agent-skills.png",
+    title: { ar: "Agent Skills", en: "Agent Skills" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/spec-kits.webp",
+    title: { ar: "Spec Kits", en: "Spec Kits" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/claude-logo.svg",
+    title: { ar: "Cloud Code", en: "Cloud Code" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/opencode-dark.webp",
+    title: { ar: "Open Code", en: "Open Code" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/gemini-ai.svg",
+    title: { ar: "Gemini CLI", en: "Gemini CLI" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/code-rabbit.png",
+    title: { ar: "Code Rabbit", en: "Code Rabbit" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
 ];
 
 // frontend skills
@@ -223,4 +271,14 @@ export const toolsSkills = [
   "TanStack Query",
   "zustand",
   "redux-toolkit",
+];
+
+export const aiSkills = [
+  "AI-Powered Development",
+  "Agent Skills",
+  "Spec Kits",
+  "Cloud Code",
+  "Open Code",
+  "Gemini CLI",
+  "CodeRabbit",
 ];
