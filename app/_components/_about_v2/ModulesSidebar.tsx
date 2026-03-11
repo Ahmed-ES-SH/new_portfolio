@@ -44,7 +44,7 @@ export function ModulesSidebar() {
             <h4 className="text-primary text-[10px] font-bold tracking-widest uppercase border-l-2 border-primary pl-2">
               {aboutTranslations.coreCompetencies.title}
             </h4>
-            <ul className="text-[11px] font-mono space-y-3 text-slate-300">
+            <ul className="text-[11px]  space-y-3 text-slate-300">
               {coreCompetencies.map((item, idx) => (
                 <li key={idx} className="flex gap-2">
                   <span className="text-primary">&gt;</span>
@@ -70,9 +70,7 @@ export function ModulesSidebar() {
                   key={tech}
                   className="border border-primary/20 bg-primary/5 p-3 text-center transition-colors hover:bg-primary/20 cursor-default"
                 >
-                  <span className="text-[10px] font-mono text-slate-100">
-                    {tech}
-                  </span>
+                  <span className="text-[10px]  text-slate-100">{tech}</span>
                 </div>
               ))}
             </div>
@@ -84,7 +82,7 @@ export function ModulesSidebar() {
               {aboutTranslations.sidebarRight?.liveTelemetry ||
                 "Live_Telemetry"}
             </h4>
-            <div className="space-y-2 font-mono">
+            <div className="space-y-2 ">
               <div className="flex justify-between text-[9px] text-slate-500">
                 <span>
                   {aboutTranslations.sidebarRight?.syncRate || "SYNC_RATE"}

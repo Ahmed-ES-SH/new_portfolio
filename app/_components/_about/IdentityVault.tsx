@@ -32,7 +32,7 @@ export function IdentityVault() {
   }, []);
 
   return (
-    <div className="flex flex-col h-full space-y-8 font-mono text-[10px] sm:text-xs tracking-[0.2em] text-[#6B7280]">
+    <div className="flex flex-col h-full space-y-8  text-[10px] sm:text-xs tracking-[0.2em] text-[#6B7280]">
       <h3 className="text-white font-bold uppercase inline-block mb-4 tracking-widest">
         ## {about.identityVault}
       </h3>

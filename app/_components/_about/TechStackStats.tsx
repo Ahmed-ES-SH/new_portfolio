@@ -6,7 +6,7 @@ export function TechStackStats() {
   const about = useTranslation("about");
 
   return (
-    <div className="bg-transparent border border-[#374151] p-8 font-mono text-[10px] sm:text-xs text-[#6B7280] uppercase relative w-full">
+    <div className="bg-transparent border border-[#374151] p-8  text-[10px] sm:text-xs text-[#6B7280] uppercase relative w-full">
       {/* Decorative corners */}
       <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#6B7280]" />
       <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#6B7280]" />

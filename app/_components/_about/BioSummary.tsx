@@ -14,7 +14,7 @@ export function BioSummary() {
 
       <div className="w-12 h-[2px] bg-[#00FFCC]" />
 
-      <p className="text-[13px] sm:text-sm md:text-[15px] font-mono text-[#6B7280] font-light leading-relaxed max-w-xl text-justify tracking-wide">
+      <p className="text-[13px] sm:text-sm md:text-[15px]  text-[#6B7280] font-light leading-relaxed max-w-xl text-justify tracking-wide">
         {about.bio.description}
       </p>
     </div>

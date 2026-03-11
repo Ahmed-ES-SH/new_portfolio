@@ -30,7 +30,7 @@ export const skills = [
       en: "AI-Powered Development",
     },
     desc: {
-      ar: "خبير في تسريع دورة حياة البرمجيات (SDLC) باستخدام أدوات الذكاء الاصطناعي؛ من تخطيط المهام عبر Spec Kits، إلى استخدام أدوات CLI مثل Google Cloud Code، والمراجعة الآلية للكود عبر CodeRabbit.",
+      ar: "خبير في تسريع دورة حياة البرمجيات (SDLC) باستخدام أدوات الذكاء الاصطناعي؛ من تخطيط المهام عبر Spec Kits، إلى استخدام أدوات CLI مثل Google Claude Code، والمراجعة الآلية للكود عبر CodeRabbit.",
       en: "Expert in accelerating SDLC using AI tools; from task planning with Spec Kits and utilizing Cloud/Gemini CLIs, to automated code auditing and reviews with CodeRabbit.",
     },
   },
@@ -51,7 +51,7 @@ export const skills = [
     },
   },
   {
-    icon: "/icons/typescript.png",
+    icon: "/icons/TypeScript.png",
     title: { ar: "TS", en: "TS" },
     desc: {
       ar: "بارع في TypeScript لكتابة جافاسكريبت أكثر قوة وقابلة للصيانة.",
@@ -125,18 +125,10 @@ export const skills = [
   },
   {
     icon: "/icons/browser.png",
-    title: { ar: "Use API", en: "Use API" },
+    title: { ar: "RESTful APIs", en: "RESTful APIs" },
     desc: {
       ar: "مهارة في دمج واستهلاك واجهات برمجة التطبيقات لعرض البيانات الديناميكية.",
       en: "Skilled in integrating and consuming APIs to fetch and display dynamic data efficiently.",
-    },
-  },
-  {
-    icon: "/icons/backend.png",
-    title: { ar: "Deal with backend", en: "Deal with backend" },
-    desc: {
-      ar: "القدرة على التعاون الفعال مع مطوري الواجهة الخلفية لتسليم حلول متكاملة.",
-      en: "Able to collaborate effectively with backend developers to deliver integrated solutions.",
     },
   },
 
@@ -207,7 +199,7 @@ export const skills = [
   },
   {
     icon: "/icons/claude-logo.svg",
-    title: { ar: "Cloud Code", en: "Cloud Code" },
+    title: { ar: "Claude Code", en: "Claude Code" },
     desc: {
       ar: "",
       en: "",
@@ -237,6 +229,38 @@ export const skills = [
       en: "",
     },
   },
+  {
+    icon: "/icons/docker.png",
+    title: { ar: "Docker", en: "Docker" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/PostgresSQL.png",
+    title: { ar: "PostgresSQL", en: "PostgresSQL" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/Supabase-Icon--Streamline-Svg-Logos.svg",
+    title: { ar: "Supabase", en: "Supabase" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
+  {
+    icon: "/icons/deployment.png",
+    title: { ar: "Deployment", en: "Deployment" },
+    desc: {
+      ar: "",
+      en: "",
+    },
+  },
 ];
 
 // frontend skills
@@ -249,18 +273,22 @@ export const frontendSkills = [
   "CSS",
   "Tailwind CSS",
   "Bootstrap",
+  "TanStack Query",
+  "zustand",
+  "redux-toolkit",
 ];
 
 // backend skills
 export const backendSkills = [
-  "PHP",
   "Laravel",
+  "NestJS",
   "MySQL",
+  "PHP",
   "Node.js",
   "Express.js",
-  "NestJS",
-  "Use API",
-  "Deal with backend",
+  "RESTful APIs",
+  "PostgresSQL",
+  "Supabase",
 ];
 
 // tools skills
@@ -268,16 +296,15 @@ export const toolsSkills = [
   "Git",
   "GitHub",
   "Command Line",
-  "TanStack Query",
-  "zustand",
-  "redux-toolkit",
+  "Docker",
+  "Deployment",
 ];
 
 export const aiSkills = [
   "AI-Powered Development",
   "Agent Skills",
   "Spec Kits",
-  "Cloud Code",
+  "Claude Code",
   "Open Code",
   "Gemini CLI",
   "CodeRabbit",

@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: any) {
 
   if (!project) {
     return (
-      <div className="p-20 text-center text-primary font-mono border border-primary m-10">
+      <div className="p-20 text-center text-primary  border border-primary m-10">
         ERROR: MODULE_NOT_FOUND // {slug}
       </div>
     );
@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: any) {
   }
 
   return (
-    <div className="relative min-h-screen flex flex-col font-display text-slate-100 overflow-x-hidden mt-24 pb-12">
+    <div className="relative xl:px-6 w-[98%] mx-auto 2xl:w-[95%] min-h-screen flex flex-col font-display text-slate-100 overflow-x-hidden mt-24 pb-12">
       {/* Background Grid */}
       <div className="fixed inset-0 grid-bg z-[-1]" />
       <div className="fixed inset-0 bg-background-dark/50 pointer-events-none z-[-1]"></div>

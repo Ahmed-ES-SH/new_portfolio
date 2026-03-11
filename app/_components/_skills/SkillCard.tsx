@@ -35,7 +35,7 @@ export const SkillCard = ({ skill, locale }: SkillCardProps) => {
           </span>
         )}
       </div>
-      <span className="font-mono text-sm tracking-wider uppercase text-center min-h-[40px] flex items-center justify-center">
+      <span className=" text-sm tracking-wider uppercase text-center min-h-[40px] flex items-center justify-center">
         {skill.title[locale]}
       </span>
       <div className="absolute inset-0 bg-(--brand-blue,#00d2ff)/5 opacity-0 hover:opacity-100 transition-opacity pointer-events-none" />

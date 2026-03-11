@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 export function AboutV2Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="relative mt-8 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050a0f] text-slate-100 font-mono">
+    <div className="relative mt-8 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050a0f] text-slate-100 ">
       {/* Grid Background */}
       <div
         className="absolute inset-0 z-0"
@@ -29,7 +29,7 @@ export function AboutV2Layout({ children }: { children: ReactNode }) {
         }}
       />
 
-      <main className="relative z-20 w-full max-w-[1720px] h-full flex flex-col lg:flex-row gap-8 items-stretch pt-24 pb-20 px-4 lg:px-10">
+      <main className="relative z-20   h-full flex flex-col lg:flex-row gap-8 items-stretch pt-24 pb-20  lg:px-10">
         {children}
       </main>
     </div>

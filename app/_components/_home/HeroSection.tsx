@@ -9,7 +9,7 @@ export function HeroSection() {
   const { hero } = useTranslation("home");
 
   return (
-    <section className="relative flex-1 flex items-center justify-center min-h-[90vh]  z-10 overflow-hidden container-section py-20">
+    <section className="relative flex-1 flex items-center justify-center min-h-[90vh]  z-10 overflow-hidden    container-section py-20">
       {/* Background Decorators */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-30 pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-l from-black via-transparent to-transparent z-10"></div>
@@ -18,7 +18,7 @@ export function HeroSection() {
 
       <div className="grid lg:grid-cols-12 gap-12 w-full relative z-20">
         {/* Left Content Column */}
-        <div className="lg:col-span-7 flex flex-col justify-center items-start space-y-10 order-2 lg:order-1">
+        <div className="lg:col-span-7 flex flex-col justify-center items-start space-y-10 order-2 lg:order-1  max-md:w-[105%]">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent-blue/50 bg-accent-blue/5">
               <span className="size-2 bg-(--color-accent-blue) animate-pulse"></span>
@@ -41,13 +41,13 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-4 sm:gap-6">
             <LocaleLink
               href="/skills"
-              className="neon-border bg-(--color-accent-blue) text-black px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-transparent hover:text-(--color-accent-blue) transition-all duration-300"
+              className="neon-border max-md:w-[80%] bg-(--color-accent-blue) text-black px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-transparent hover:text-(--color-accent-blue) transition-all duration-300"
             >
               {hero.badge1}
             </LocaleLink>
             <LocaleLink
               href="/projects"
-              className="neon-border bg-transparent text-(--color-accent-blue) px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-(--color-accent-blue)/10 transition-all duration-300"
+              className="neon-border max-md:w-[80%]  bg-transparent text-(--color-accent-blue) px-6 sm:px-10 py-3 sm:py-4 text-xs sm:text-sm font-black uppercase tracking-widest hover:bg-(--color-accent-blue)/10 transition-all duration-300"
             >
               {hero.badge2}
             </LocaleLink>
@@ -122,7 +122,7 @@ export function HeroSection() {
             </div>
 
             {/* Corner Decorative Tech Info */}
-            <div className="absolute top-0 right-0 p-2 sm:p-4 border-e-2 border-t-2 border-primary text-primary text-[8px] sm:text-[10px] font-mono bg-black/60 z-20">
+            <div className="absolute top-0 right-0 p-2 sm:p-4 border-e-2 border-t-2 border-primary text-primary text-[8px] sm:text-[10px]  bg-black/60 z-20">
               {hero.systemInfo.id}
               <br />
               {hero.systemInfo.src}
@@ -130,7 +130,7 @@ export function HeroSection() {
               {hero.systemInfo.ver}
             </div>
 
-            <div className="absolute bottom-0 right-0 p-2 sm:p-4 border-s-2 border-b-2 border-primary text-primary text-[8px] sm:text-[10px] font-mono bg-black/60 z-20">
+            <div className="absolute bottom-0 right-0 p-2 sm:p-4 border-s-2 border-b-2 border-primary text-primary text-[8px] sm:text-[10px]  bg-black/60 z-20">
               {hero.coordInfo.x}
               <br />
               {hero.coordInfo.y}

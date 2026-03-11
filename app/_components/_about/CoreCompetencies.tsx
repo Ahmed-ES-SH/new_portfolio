@@ -6,7 +6,7 @@ export function CoreCompetencies() {
   const about = useTranslation("about");
 
   return (
-    <div className="flex flex-col h-full font-mono relative">
+    <div className="flex flex-col h-full  relative">
       <h3 className="text-white font-bold mb-12 text-[10px] sm:text-xs uppercase tracking-widest">
         #### {about.coreCompetencies.title}
       </h3>

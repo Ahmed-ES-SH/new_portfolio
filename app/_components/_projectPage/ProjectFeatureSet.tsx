@@ -32,7 +32,7 @@ export default function ProjectFeatureSet() {
   return (
     <div className="terminal-module">
       <div className="bg-terminal-border px-4 py-1">
-        <h3 className="font-mono text-xs font-bold text-primary uppercase">
+        <h3 className=" text-xs font-bold text-primary uppercase">
           {t.sections.featureSet}
         </h3>
       </div>
@@ -41,7 +41,7 @@ export default function ProjectFeatureSet() {
           <div key={idx} className="flex gap-3">
             <div className="shrink-0 pt-0.5">{feat.icon}</div>
             <div>
-              <h4 className="font-mono text-sm font-bold text-white uppercase">
+              <h4 className=" text-sm font-bold text-white uppercase">
                 {feat.title}
               </h4>
               <p className="text-xs text-slate-400 mt-1">{feat.desc}</p>

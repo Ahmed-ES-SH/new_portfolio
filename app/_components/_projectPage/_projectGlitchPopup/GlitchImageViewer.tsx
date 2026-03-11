@@ -186,9 +186,7 @@ export default function GlitchImageViewer({
             </motion.div>
           </AnimatePresence>
         ) : (
-          <div className="text-primary/50 font-mono tracking-widest">
-            NO_DATA_FOUND
-          </div>
+          <div className="text-primary/50  tracking-widest">NO_DATA_FOUND</div>
         )}
 
         {/* Navigation Arrows */}
@@ -209,7 +207,7 @@ export default function GlitchImageViewer({
           <ChevronRight />
         </button>
 
-        <div className="absolute bottom-4 right-4 bg-black/80 border border-primary/30 px-3 py-1 text-[10px] font-mono text-primary/80 uppercase tracking-tighter z-20 pointer-events-none">
+        <div className="absolute bottom-4 right-4 bg-black/80 border border-primary/30 px-3 py-1 text-[10px]  text-primary/80 uppercase tracking-tighter z-20 pointer-events-none">
           IMG_REF: CC-019-DELTA
         </div>
       </div>

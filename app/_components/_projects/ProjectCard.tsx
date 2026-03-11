@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         >
           {project.title[locale]}
         </h3>
-        <span className="text-xs bg-primary text-background-dark px-2 py-0.5 font-bold shrink-0">
+        <span className="text-xs bg-primary text-gray-800 px-2 py-0.5 font-bold shrink-0">
           {project.slug === "pulse-net-observer" // Just a dummy mapping to keep the latest badge if needed, or we use a condition based on data
             ? t.card.latest
             : "V_1.0"}
@@ -103,7 +103,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Cyber Stats */}
-        <div className="bg-slate-900/80 p-4 border-l-2 border-primary font-mono text-xs flex flex-col gap-2 mt-auto">
+        <div className="bg-slate-900/80 p-4 border-l-2 border-primary  text-xs flex flex-col gap-2 mt-auto">
           <div className="flex justify-between items-center gap-2">
             <span className="text-slate-500 truncate">{t.card.techStack}</span>
             <span className="text-primary font-bold uppercase shrink-0">

@@ -190,7 +190,7 @@ export default function TerminalBox() {
               <div className="w-3 h-3 rounded-full bg-green-500/80 shadow-[0_0_5px_rgba(34,197,94,0.5)]" />
             </div>
 
-            <div className="text-[10px] text-primary opacity-70 font-mono tracking-widest uppercase">
+            <div className="text-[10px] text-primary opacity-70  tracking-widest uppercase">
               [ SYS_TERMINAL_V1.0 — INTERACTIVE ]
             </div>
             <div className="w-[44px]" />
@@ -200,7 +200,7 @@ export default function TerminalBox() {
           <div
             ref={scrollRef}
             onClick={() => inputRef.current?.focus()}
-            className="container-section p-4 h-[25vh] min-h-[160px] overflow-y-auto font-mono text-sm text-primary relative z-10 cursor-text hidden-scrollbar"
+            className="container-section p-4 h-[25vh] min-h-[160px] overflow-y-auto  text-sm text-primary relative z-10 cursor-text hidden-scrollbar"
           >
             {history.map((line) => (
               <div

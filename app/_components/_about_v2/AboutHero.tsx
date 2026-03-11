@@ -10,7 +10,7 @@ export function AboutHero() {
 
   return (
     <section className="flex-1 flex flex-col items-center justify-center z-20">
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative max-md:w-full z-10 flex flex-col items-center">
         {/* Profile Image Frame */}
         <div className="relative p-2 border border-primary/30 shadow-[0_0_50px_rgba(0,242,255,0.15)] group">
           {/* Corner Brackets */}
@@ -30,7 +30,7 @@ export function AboutHero() {
             <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none"></div>
             <div className="scanline absolute w-full h-[2px] bg-primary/50 shadow-[0_0_10px_#00f2ff] top-0 left-0 pointer-events-none animate-[scanline_4s_linear_infinite]"></div>
 
-            <div className="absolute bottom-4 right-4  font-mono text-[10px] bg-background-dark/80 px-2 py-1 border border-primary/40 text-primary">
+            <div className="absolute bottom-4 right-4  text-[10px] bg-background-dark/80 px-2 py-1 border border-primary/40 text-primary">
               {aboutTranslations.hero?.subId || "SUB_ID: ALEX_REED_01"}
             </div>
           </div>
@@ -45,7 +45,7 @@ export function AboutHero() {
             {aboutTranslations.hero?.role || "Full Stack Developer"}
           </div>
 
-          <p className="text-slate-300 text-sm md:text-base font-mono leading-relaxed mb-10 px-4">
+          <p className="text-slate-300 text-sm md:text-base  leading-relaxed mb-10 px-4">
             {aboutTranslations.bio.description}
           </p>
 

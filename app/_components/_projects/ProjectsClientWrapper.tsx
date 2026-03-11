@@ -27,7 +27,7 @@ export default function ProjectsClientWrapper({
       : initialProjects.filter((p) => p.categories.includes(activeTab));
 
   return (
-    <div className="relative pt-8 min-h-screen w-full flex flex-col text-slate-100">
+    <div className="relative py-8 min-h-screen w-full flex flex-col text-slate-100">
       {/* Background Grid - from original design */}
       <div
         className="fixed inset-0 pointer-events-none z-[-1]"

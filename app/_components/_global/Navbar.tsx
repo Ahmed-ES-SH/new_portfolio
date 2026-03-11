@@ -33,14 +33,14 @@ export function Navbar() {
   ];
 
   return (
-    <header className="flex max-h-[70px]  items-center bg-primary/10 backdrop-blur-md justify-between whitespace-nowrap border-b border-primary/30 px-6 md:px-10 py-2 lg:py-6 z-50 fixed top-0 w-full left-0 right-0">
-      <LocaleLink href="/" className="flex items-center gap-4 text-primary">
+    <header className="flex max-h-[70px] items-center bg-primary/10 backdrop-blur-md justify-between whitespace-nowrap border-b border-primary/30 px-6 md:px-10 py-2 lg:py-6 z-50 fixed top-0 w-full left-0 right-0">
+      <LocaleLink href="/" className="flex  items-center gap-4 text-primary">
         <Image
           src={"/logo.png"}
           className="w-16"
           alt="logo"
-          width={1024}
-          height={1980}
+          width={256}
+          height={256}
         />
 
         <h2 className="hidden md:block text-lg md:text-xl font-black leading-tight tracking-widest uppercase neon-text">

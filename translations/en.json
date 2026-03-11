@@ -1,41 +1,41 @@
 {
   "metaHomePage": {
-    "title": "Ahmed Ismail | Full Stack Developer",
-    "description": "Ahmed Ismail portfolio. Full-stack developer building scalable platforms using Next.js, Laravel, and AI-accelerated development workflows."
+    "title": "AHMED ISMAIL | Full Stack Developer",
+    "description": "AHMED ISMAIL portfolio. Full-stack developer building scalable platforms using Next.js, Laravel, and AI-accelerated development workflows."
   },
 
   "metaSkillsPage": {
-    "title": "Ahmed Ismail | Technical Skills",
-    "description": "Overview of Ahmed Ismail's technical skills including full-stack development, system architecture, AI-driven development workflows, Next.js, Laravel, and modern engineering practices."
+    "title": "AHMED ISMAIL | Technical Skills",
+    "description": "Overview of AHMED ISMAIL's technical skills including full-stack development, system architecture, AI-driven development workflows, Next.js, Laravel, and modern engineering practices."
   },
 
   "metaExplainPage": {
-    "title": "Ahmed Ismail | Development Workflow",
-    "description": "Inside Ahmed Ismail's AI-accelerated development workflow including project planning, spec-driven execution, terminal-based AI development, and automated code review."
+    "title": "AHMED ISMAIL | Development Workflow",
+    "description": "Inside AHMED ISMAIL's AI-accelerated development workflow including project planning, spec-driven execution, terminal-based AI development, and automated code review."
   },
 
   "metaAboutPage": {
-    "title": "Ahmed Ismail | About",
-    "description": "Learn more about Ahmed Ismail, a full-stack developer focused on building scalable platforms, structured systems, and performance-oriented web applications."
+    "title": "AHMED ISMAIL | About",
+    "description": "Learn more about AHMED ISMAIL, a full-stack developer focused on building scalable platforms, structured systems, and performance-oriented web applications."
   },
 
   "metaProjectsPage": {
-    "title": "Ahmed Ismail | Projects",
-    "description": "Explore projects built by Ahmed Ismail including modern web platforms, scalable systems, and real-world applications developed with Next.js and Laravel."
+    "title": "AHMED ISMAIL | Projects",
+    "description": "Explore projects built by AHMED ISMAIL including modern web platforms, scalable systems, and real-world applications developed with Next.js and Laravel."
   },
 
   "metaProjectPage": {
-    "title": "Ahmed Ismail | Project | ",
-    "description": "Ahmed Ismail | Project | "
+    "title": "AHMED ISMAIL | Project | ",
+    "description": "AHMED ISMAIL | Project | "
   },
 
   "home": {
     "hero": {
       "status": "Status: Online // Protocol: Active",
       "greeting": "Hi, i'm",
-      "name": "Ahmed Ismail",
+      "name": "AHMED ISMAIL",
       "titles": [
-        "Ahmed Ismail",
+        "AHMED ISMAIL",
         "Full Stack Developer",
         "Frontend Developer",
         "Backend Developer"
@@ -86,7 +86,7 @@
   },
   "global": {
     "navbar": {
-      "name": "Ahmed Ismail",
+      "name": "AHMED ISMAIL",
       "links": {
         "home": "./Home",
         "projects": "./Projects",
@@ -100,7 +100,7 @@
       "github": "GitHub // Repo",
       "linkedin": "LinkedIn // Connect",
       "twitter": "Twitter // Feed",
-      "copyright": "Ahmed Ismail. Engineered for high performance systems."
+      "copyright": "AHMED ISMAIL. Engineered for high performance Applications."
     }
   },
   "about": {

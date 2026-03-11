@@ -2,6 +2,7 @@
 import Image from "next/image";
 import LocaleLink from "../_global/LocaleLink";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface SkillsHeroSectionProps {
   t: {
@@ -44,9 +45,15 @@ export default function SkillsHeroSection({ t }: SkillsHeroSectionProps) {
         {/* Description */}
         <div className="max-w-xl ltr:border-l-2  rtl:border-r-2 border-(--primary,#00f0ff)/30 ltr:pl-6 rtl:pr-6 py-2 mb-16">
           <div className="flex flex-col items-end">
-            <p className="text-slate-400 max-md:text-sm font-medium leading-relaxed tracking-tight">
-              {readMore ? t?.description : t?.description.slice(0, 300) + "..."}
-            </p>
+            <AnimatePresence>
+              <motion.p
+                animate={{ height: readMore ? "auto" : 120 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                className="overflow-hidden text-slate-400 max-md:text-sm font-medium leading-relaxed tracking-tight"
+              >
+                {t?.description}
+              </motion.p>
+            </AnimatePresence>
             <button
               onClick={() => setReadMore(!readMore)}
               className="text-(--primary,#00f0ff) text-xs hover:underline whitespace-nowrap font-black tracking-[0.3em] uppercase"

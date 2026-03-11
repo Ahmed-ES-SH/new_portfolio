@@ -41,7 +41,7 @@ export default function GlitchSidebar({
         <span className="text-xs font-bold text-primary tracking-widest uppercase">
           Asset_Inventory
         </span>
-        <span className="text-[10px] font-mono text-primary/60">
+        <span className="text-[10px]  text-primary/60">
           {sidebarImages.length < 10
             ? `0${sidebarImages.length}`
             : sidebarImages.length}
@@ -101,7 +101,7 @@ export default function GlitchSidebar({
                   </div>
                   <div className="mt-1 flex justify-between items-center px-1">
                     <span
-                      className={`text-[9px] font-mono uppercase ${
+                      className={`text-[9px]  uppercase ${
                         activeIndex === globalIdx
                           ? "text-primary/70"
                           : "text-primary/40"

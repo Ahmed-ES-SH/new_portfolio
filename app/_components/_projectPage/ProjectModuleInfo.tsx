@@ -32,7 +32,7 @@ export default function ProjectModuleInfo({
   return (
     <div className="terminal-module relative flex-1">
       <div className="bg-terminal-border px-4 py-1 flex justify-between items-center">
-        <h3 className="font-mono text-xs font-bold text-primary uppercase">
+        <h3 className=" text-xs font-bold text-primary uppercase">
           {t.sections.moduleInfo}
         </h3>
         <div className="flex gap-1">
@@ -42,7 +42,7 @@ export default function ProjectModuleInfo({
       </div>
       <div className="p-6">
         <div className="font-display text-slate-300 leading-relaxed whitespace-pre-line min-h-[160px]">
-          <span className="text-primary font-mono mr-2 block mb-2 underline tracking-widest text-[10px]">
+          <span className="text-primary  mr-2 block mb-2 underline tracking-widest text-[10px]">
             INITIALIZING_DETAILED_RECON...
           </span>
           {sequence.length > 0 && (
@@ -58,10 +58,10 @@ export default function ProjectModuleInfo({
         </div>
 
         <div className="mt-8 border-t border-terminal-border/30 pt-6">
-          <h4 className="font-mono text-[10px] text-primary uppercase mb-4 tracking-[0.2em]">
+          <h4 className=" text-[10px] text-primary uppercase mb-4 tracking-[0.2em]">
             {t.sections.systemDependencies}
           </h4>
-          <div className="grid grid-cols-2 gap-y-2 gap-x-8 font-mono text-xs">
+          <div className="grid grid-cols-2 gap-y-2 gap-x-8  text-xs">
             {project.skills.slice(0, 8).map((skill, idx) => (
               <div
                 key={idx}
@@ -83,22 +83,22 @@ export default function ProjectModuleInfo({
 
         <div className="mt-6 flex flex-wrap gap-4 border-t border-terminal-border pt-6">
           <div className="flex-1 min-w-[120px]">
-            <p className="font-mono text-[10px] text-slate-500 uppercase">
+            <p className=" text-[10px] text-slate-500 uppercase">
               {t.metrics.version}
             </p>
-            <p className="font-mono text-sm text-white">8.4.2-STABLE</p>
+            <p className=" text-sm text-white">8.4.2-STABLE</p>
           </div>
           <div className="flex-1 min-w-[120px]">
-            <p className="font-mono text-[10px] text-slate-500 uppercase">
+            <p className=" text-[10px] text-slate-500 uppercase">
               {t.metrics.latency}
             </p>
-            <p className="font-mono text-sm text-white">0.04ms</p>
+            <p className=" text-sm text-white">0.04ms</p>
           </div>
           <div className="flex-1 min-w-[120px]">
-            <p className="font-mono text-[10px] text-slate-500 uppercase">
+            <p className=" text-[10px] text-slate-500 uppercase">
               {t.metrics.uptime}
             </p>
-            <p className="font-mono text-sm text-white">99.999%</p>
+            <p className=" text-sm text-white">99.999%</p>
           </div>
         </div>
       </div>

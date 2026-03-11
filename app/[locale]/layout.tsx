@@ -48,7 +48,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`antialiased`}>
+      <body className={`antialiased overflow-hidden`}>
         <VariablesProvider>
           <CustomCursor />
           <Navbar />

@@ -29,8 +29,8 @@ export function Footer() {
 
         <div className="h-px flex-1 bg-primary/10 mx-8 hidden md:block"></div>
 
-        <p className="text-[10px] uppercase tracking-[0.2em] text-primary/40 font-mono text-center md:text-right">
-          {new Date().getFullYear()} {footer.copyright}
+        <p className="text-[10px] uppercase tracking-[0.2em] text-primary/40  text-center md:text-right">
+          &copy; {new Date().getFullYear()} {footer.copyright}
         </p>
       </div>
     </footer>

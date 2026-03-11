@@ -36,20 +36,18 @@ export default function ProjectSystemLog() {
   return (
     <div className="terminal-module flex-1">
       <div className="bg-terminal-border px-4 py-1">
-        <h3 className="font-mono text-xs font-bold text-primary uppercase">
+        <h3 className=" text-xs font-bold text-primary uppercase">
           {t.sections.systemLog}
         </h3>
       </div>
-      <div className="p-4 font-mono text-[10px] text-slate-500 overflow-y-auto max-h-64 space-y-2">
+      <div className="p-4  text-[10px] text-slate-500 overflow-y-auto max-h-64 space-y-2">
         {logs.map((log, idx) => (
           <p key={idx}>
             {log.includes("[WARN]") ? (
               <span className="text-red-500/80">{log}</span>
             ) : (
               <>
-                <span className="text-primary/50">
-                  {log.split(" ")[0]}{" "}
-                </span>
+                <span className="text-primary/50">{log.split(" ")[0]} </span>
                 {log.substring(log.indexOf(" ") + 1)}
               </>
             )}

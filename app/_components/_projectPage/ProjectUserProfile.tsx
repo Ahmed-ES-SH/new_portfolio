@@ -18,10 +18,10 @@ export default function ProjectUserProfile() {
           />
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="font-mono text-xs font-bold text-white uppercase truncate">
+          <h4 className=" text-xs font-bold text-white uppercase truncate">
             ROOT_USER // AHMED_ISMAIL
           </h4>
-          <p className="font-mono text-[9px] text-primary/70 uppercase tracking-tighter">
+          <p className=" text-[9px] text-primary/70 uppercase tracking-tighter">
             System Architect & Lead Developer
           </p>
         </div>
@@ -32,12 +32,10 @@ export default function ProjectUserProfile() {
         </div>
       </div>
       <div className="bg-primary/5 px-4 py-2 border-t border-terminal-border/30 flex justify-between items-center">
-        <span className="font-mono text-[9px] text-slate-500 uppercase">
+        <span className=" text-[9px] text-slate-500 uppercase">
           Clearance_Level
         </span>
-        <span className="font-mono text-[9px] text-primary">
-          Level_01_Admin
-        </span>
+        <span className=" text-[9px] text-primary">Level_01_Admin</span>
       </div>
     </div>
   );

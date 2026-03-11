@@ -15,7 +15,7 @@ export default function AnimateText({ hero }: { hero: any }) {
   ];
 
   return (
-    <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.1] md:leading-[0.9] tracking-tighter text-white neon-text uppercase min-h-[140px] md:min-h-[180px]">
+    <h1 className="text-5xl min-h-[180px] sm:text-6xl md:text-7xl font-black leading-[1.1] md:leading-[0.9] tracking-tighter text-white neon-text uppercase md:min-h-[180px]">
       {hero.greeting} <br />
       <span className="text-(--color-accent-blue)">
         <TypeAnimation

@@ -22,30 +22,26 @@ export function AboutFooter() {
 
   return (
     <footer className="fixed bottom-0 w-full flex items-center justify-between  bg-background-dark/90 px-4 lg:px-10 py-3 z-50 text-slate-100">
-
       {/* Left Data Section */}
       <div className="flex gap-4 lg:gap-10">
         <div className="flex flex-col">
-          <span className="text-[9px] text-slate-500 uppercase tracking-widest font-mono">
+          <span className="text-[9px] text-slate-500 uppercase tracking-widest ">
             {aboutTranslations.footer?.currentSector || "Current_Sector"}
           </span>
-          <span className="text-[10px] text-primary font-mono truncate">
+          <span className="text-[10px] text-primary  truncate">
             {aboutTranslations.footer?.sectorValue || "SAN_FRANCISCO_HUB_01"}
           </span>
         </div>
 
         <div className="flex flex-col border-l border-primary/20 pl-4 lg:pl-10">
-          <span className="text-[9px] text-slate-500 uppercase tracking-widest font-mono">
+          <span className="text-[9px] text-slate-500 uppercase tracking-widest ">
             {aboutTranslations.footer?.kernelVersion || "Kernel_Version"}
           </span>
-          <span className="text-[10px] text-primary font-mono tracking-widest truncate">
+          <span className="text-[10px] text-primary  tracking-widest truncate">
             {aboutTranslations.footer?.kernelValue || "OS_VER_8.1.1.0"}
           </span>
         </div>
       </div>
-
-
-
     </footer>
   );
 }

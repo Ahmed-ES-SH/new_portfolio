@@ -24,7 +24,7 @@ export function ExplainHero() {
           </span>
         </h1>
 
-        <p className="max-w-3xl text-slate-300 text-sm md:text-base font-mono leading-relaxed opacity-80 mt-2">
+        <p className="max-w-3xl text-slate-300 text-sm md:text-base  leading-relaxed opacity-80 mt-2">
           {explainTrans.hero?.subtitle ||
             "Spec-driven execution & automated development pipelines. Bridging the gap between high-level rationale and binary precision."}
         </p>
