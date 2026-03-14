@@ -222,7 +222,7 @@ export const skills = [
     },
   },
   {
-    icon: "/icons/code-rabbit.png",
+    icon: "/icons/code-rabbit.svg",
     title: { ar: "Code Rabbit", en: "Code Rabbit" },
     desc: {
       ar: "",
@@ -230,7 +230,7 @@ export const skills = [
     },
   },
   {
-    icon: "/icons/docker.png",
+    icon: "/icons/Docker.png",
     title: { ar: "Docker", en: "Docker" },
     desc: {
       ar: "",
@@ -307,5 +307,5 @@ export const aiSkills = [
   "Claude Code",
   "Open Code",
   "Gemini CLI",
-  "CodeRabbit",
+  "Code Rabbit",
 ];
