@@ -1,17 +1,17 @@
 "use client";
 import useVariablesContext from "@/app/context/VariablesContext";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ExternalLink,
-  File,
-  Mail,
-  MessageSquare,
-  ShieldCheck,
-  X,
-} from "lucide-react";
-import Image from "next/image";
+import { File, Mail, MessageSquare, ShieldCheck, X } from "lucide-react";
 import { useMemo } from "react";
 import { createPortal } from "react-dom";
+import ContactSlide from "./_contactPopup/ContactSlide";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // Glitch particle generator for entrance
 function generateGlitchParticles(count: number) {
@@ -154,48 +154,50 @@ export default function ContactPopup() {
               </button>
             </div>
 
-            {/* Content */}
-            <div className="p-8 max-h-[70vh] overflow-y-auto hidden-scrollbar md:p-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 relative z-10">
-              {contactOptions.map((opt) => (
-                <motion.a
-                  key={opt.id}
-                  href={opt.link}
-                  target="_blank"
-                  onClick={() => {
-                    setIsPopupOpen(false);
-                  }}
-                  download={opt.id === "cv" && "Ahmed-Ismail-Resume.pdf"}
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  className={`relative group bg-slate-900/50 border border-white/10 p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-primary/50 ${opt.shadow}`}
-                >
-                  {/* Hover Scanline */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-linear-to-b from-primary transparent to-primary pointer-events-none"></div>
-
-                  <div className="mb-4 relative size-12 md:size-16 xl:size-24">
-                    <Image
-                      src={opt.image}
-                      alt={opt.id}
-                      fill
-                      className="object-contain drop-shadow-2xl brightness-90 group-hover:brightness-110 transition-all"
+            {/* Content Swiper */}
+            <div className="relative group/swiper pt-8 px-1">
+              <Swiper
+                modules={[Autoplay, Pagination, Navigation]}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                spaceBetween={20}
+                slidesPerView={1}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                }}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                navigation={{
+                  prevEl: ".swiper-button-prev-custom",
+                  nextEl: ".swiper-button-next-custom",
+                }}
+                className="p-8 md:p-12 !pb-16 relative z-10"
+              >
+                {contactOptions.map((opt) => (
+                  <SwiperSlide key={opt.id}>
+                    <ContactSlide
+                      opt={opt}
+                      onClick={() => setIsPopupOpen(false)}
                     />
-                  </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-                  <div className="space-y-1">
-                    <div className="text-[10px]  text-primary/40 tracking-tighter">
-                      {opt.subLabel}
-                    </div>
-                    <h3 className="text-sm md:text-base font-black tracking-widest text-white group-hover:text-primary transition-colors">
-                      {opt.label}
-                    </h3>
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-2 text-[10px]  text-white/50 border-t border-white/5 pt-4 w-full justify-center">
-                    <ExternalLink className="size-3" />
-                    <span>INITIALIZE_SESSION</span>
-                  </div>
-                </motion.a>
-              ))}
+              {/* Custom Navigation Buttons - Visible only when 1 slide is shown (mobile) */}
+              <button className="swiper-button-prev-custom absolute left-2 top-1/2 -translate-y-1/2 z-20 size-10 flex items-center justify-center bg-black/50 border border-primary/30 text-primary hover:bg-primary/20 transition-all rounded-full md:hidden">
+                <ChevronLeft className="size-6" />
+              </button>
+              <button className="swiper-button-next-custom absolute right-2 top-1/2 -translate-y-1/2 z-20 size-10 flex items-center justify-center bg-black/50 border border-primary/30 text-primary hover:bg-primary/20 transition-all rounded-full md:hidden">
+                <ChevronRight className="size-6" />
+              </button>
             </div>
 
             {/* Footer Decoration */}

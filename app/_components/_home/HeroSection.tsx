@@ -55,7 +55,7 @@ export function HeroSection() {
         </div>
 
         {/* Right Illustration Column */}
-        <div className="lg:col-span-5 relative flex items-center justify-center order-1 lg:order-2">
+        <div className="lg:col-span-5 relative flex items-center justify-center order-1 lg:order-2 max-md:w-[85%] mx-auto w-full">
           <div className="relative w-full aspect-4/5 max-w-md group">
             <div className="relative w-full h-full overflow-hidden">
               {/* Back layered Image */}
