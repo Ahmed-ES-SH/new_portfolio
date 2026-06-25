@@ -24,7 +24,7 @@ export default function ProjectModuleInfo({
     ? displayContent.split(" ").reduce((acc: (string | number)[], word, i) => {
         const prev = i === 0 ? "" : (acc[acc.length - 2] as string) + " ";
         acc.push(prev + word);
-        acc.push(20); // Delay between words in ms
+        acc.push(1);
         return acc;
       }, [])
     : [];

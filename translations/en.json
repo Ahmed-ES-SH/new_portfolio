@@ -10,8 +10,8 @@
   },
 
   "metaExplainPage": {
-    "title": "AHMED ISMAIL | Development Workflow",
-    "description": "Inside AHMED ISMAIL's AI-accelerated development workflow including project planning, spec-driven execution, terminal-based AI development, and automated code review."
+    "title": "AHMED ISMAIL | AI-Assisted Development Workflow",
+    "description": "A structured 5-stage development methodology: Planning, Context Preparation, Execution, Verification, and Review. How Ahmed Ismail integrates AI as a controlled execution layer."
   },
 
   "metaAboutPage": {
@@ -80,7 +80,9 @@
         "frontend": "Frontend",
         "backend": "Backend",
         "tools": "Tools & Architecture",
-        "ai": "AI-Powered Development"
+        "ai": "AI-Powered Development",
+        "aiCapabilities": "AI Capabilities",
+        "aiTools": "AI Tooling"
       }
     }
   },
@@ -239,58 +241,133 @@
     }
   },
   "explain": {
+    "labels": {
+      "stage": "STAGE",
+      "myRole": "MY ROLE",
+      "aiRole": "AI ROLE",
+      "inputs": "INPUTS",
+      "outputs": "OUTPUTS",
+      "decisions": "DECISIONS",
+      "prevents": "PREVENTS",
+      "whyMatters": "WHY IT MATTERS"
+    },
     "hero": {
-      "title": "AUTOMATED ENGINEERING",
-      "version": "V2.4",
-      "subtitle": "Spec-driven execution & automated development pipelines. Bridging the gap between high-level rationale and binary precision."
+      "headline": "AI-Assisted Development Workflow",
+      "subHeadline": "A structured 5-stage development cycle where AI accelerates execution while I retain full control over architecture, decisions, and quality. Not random code generation — spec-driven engineering.",
+      "trustSignals": [
+        "Human-Led Decision Making",
+        "Spec-Driven Execution",
+        "Structured 5-Stage Cycle",
+        "Full Quality Ownership"
+      ]
     },
-    "rationale": {
-      "sectionNum": "01",
-      "sectionTitle": "RATIONALE & PLANNING",
-      "sectionSubtitle": "Groups the preparatory work that defines scope, success criteria, and the agent's role.",
-      "items": {
-        "planning": {
-          "title": "Project Understanding & Task Planning",
-          "desc": "Analyze project requirements and break down work into clear tasks, then build a structured execution plan using Spec Kits that include tasks, rules, and acceptance criteria that the AI Agent will follow."
-        },
-        "execution": {
-          "title": "Spec-Driven Execution",
-          "desc": "Execute tasks according to the plan defined in the Spec Kit so that the AI Agent works in structured steps instead of generating random code."
-        },
-        "agentSetup": {
-          "title": "AI Agent Setup & Skill Configuration",
-          "desc": "Equip the AI Agent with the skills appropriate to the project nature and define the tools and capabilities it needs to perform tasks efficiently."
-        }
-      }
+    "overview": {
+      "title": "THE WORKFLOW",
+      "subtitle": "Five distinct stages that transform a requirement into production-quality code, each with a clear division of responsibility between human judgment and AI execution.",
+      "steps": [
+        { "number": "01", "label": "Planning", "summary": "Define scope, success criteria, and create a structured execution brief that the AI agent follows." },
+        { "number": "02", "label": "Context Prep", "summary": "Gather existing codebase context, set up agent skills, and prepare precise prompts for AI interaction." },
+        { "number": "03", "label": "Execution", "summary": "AI implements code against the spec while I monitor progress, review outputs, and provide real-time guidance." },
+        { "number": "04", "label": "Verification", "summary": "Run tests, validate acceptance criteria, check for regressions, and ensure the implementation meets spec." },
+        { "number": "05", "label": "Review", "summary": "Final quality audit — code review, architecture fit, performance assessment, and documentation update." }
+      ]
     },
-    "terminal": {
-      "sectionNum": "02",
-      "sectionTitle": "TERMINAL-DRIVEN DEVELOPMENT",
-      "pipeline": {
-        "title": "CODE FLOW PIPELINE",
-        "desc": "Continuous delivery of high-quality code through automated review hooks. Every line is validated against security, performance, and style protocols before it ever touches production.",
-        "points": [
-          "Terminal-Driven AI Development",
-          "Automated Code Review (Rabbit Engine)"
-        ]
+    "stages": {
+      "planning": {
+        "stageNum": "01",
+        "title": "Planning",
+        "purpose": "The planning phase ensures every task has a clear objective, success criteria, and a structured execution plan before any code is written. This prevents wasted effort and keeps AI agents focused on well-defined goals.",
+        "humanRole": "I define the task scope, write the execution brief, set acceptance criteria, and approve the plan before execution begins.",
+        "aiRole": "The AI agent analyzes the brief, asks clarifying questions, and confirms understanding of the task boundaries and expected outcomes.",
+        "inputs": ["Project requirements", "User stories or tickets", "Existing codebase context", "Technical constraints"],
+        "outputs": ["Approved execution brief", "Clear success criteria", "Task breakdown with scope boundaries", "Risk assessment notes"],
+        "decisions": ["What to build and why", "Which approach fits the architecture", "Priority and sequencing", "Definition of done"],
+        "prevents": ["Scope creep during implementation", "Misaligned expectations", "Wasted engineering effort", "Ambiguous requirements"],
+        "whyMatters": "Every minute spent in planning saves ten minutes in rework. This phase is where human experience and domain knowledge create the blueprint that guides the entire cycle."
       },
-      "cli": {
-        "desc": "Run and manage the development cycle using AI tools dedicated to the CLI and work within the terminal, such as Cloud, to execute programming tasks, generate code, and accelerate the build process."
+      "contextPrep": {
+        "stageNum": "02",
+        "title": "Context Preparation",
+        "purpose": "AI agents are only as good as the context they receive. This phase gathers relevant code, documentation, and configuration so the agent can make informed decisions aligned with the project's existing patterns.",
+        "humanRole": "I curate the relevant files, write clear instructions, configure agent skills, and provide background knowledge the AI needs to work effectively.",
+        "aiRole": "The AI ingests the provided context, maps dependencies, identifies relevant patterns, and prepares its working environment for the task.",
+        "inputs": ["Existing source files", "Architecture documentation", "Coding standards guide", "Relevant config files"],
+        "outputs": ["Curated context package", "Skill configuration for the agent", "Clear prompt instructions", "Dependency map"],
+        "decisions": ["Which context is relevant", "How to frame the task for the AI", "Which skills/tools the agent needs", "What patterns to preserve"],
+        "prevents": ["AI generating code that doesn't fit the codebase", "Missing critical dependencies", "Inconsistent style or patterns", "Hallucination due to insufficient context"],
+        "whyMatters": "The quality of context directly determines the quality of output. This is the single highest-leverage phase for getting great results from AI assistance."
+      },
+      "execution": {
+        "stageNum": "03",
+        "title": "Execution",
+        "purpose": "With a solid plan and rich context, the AI implements the solution. I monitor progress, review intermediate outputs, and step in when the agent needs guidance on complex decisions.",
+        "humanRole": "I run the AI agent, review generated code in real-time, provide feedback, make architectural decisions, and approve or reject implementations.",
+        "aiRole": "The AI generates code according to the spec, follows the defined patterns, implements features, and flags any ambiguities it encounters.",
+        "inputs": ["Approved execution brief", "Curated context package", "Coding standards", "Test specifications"],
+        "outputs": ["Implemented feature code", "Tests (unit/integration)", "Updated type definitions", "Documentation of changes"],
+        "decisions": ["Accept or reject AI suggestions", "Architectural trade-offs", "When to override AI output", "Code quality thresholds"],
+        "prevents": ["Random or unstructured code generation", "Deviation from the specification", "Inconsistent code quality", "Architectural drift"],
+        "whyMatters": "This is where the AI's speed meets human judgment. The agent generates rapidly, but every output passes through my filter before it enters the codebase."
+      },
+      "verification": {
+        "stageNum": "04",
+        "title": "Verification",
+        "purpose": "Every implementation must be validated against the acceptance criteria. This phase catches regressions, edge cases, and quality issues before they reach production.",
+        "humanRole": "I review test results, verify edge cases are handled, check for regressions in related features, and sign off on quality.",
+        "aiRole": "The AI runs automated tests, checks type safety, validates against the spec, and reports any failures or warnings.",
+        "inputs": ["Implementation code", "Test suites", "Acceptance criteria from planning", "Existing regression tests"],
+        "outputs": ["Test results report", "Validation against acceptance criteria", "List of resolved/failing checks", "Quality sign-off"],
+        "decisions": ["Is the implementation acceptable?", "What needs to be fixed before merge", "Are edge cases covered?", "Is performance acceptable?"],
+        "prevents": ["Bugs reaching production", "Regression in existing features", "Unhandled edge cases", "Technical debt accumulation"],
+        "whyMatters": "Verification is the safety net. It ensures that speed from AI assistance never comes at the cost of quality or reliability."
+      },
+      "review": {
+        "stageNum": "05",
+        "title": "Review",
+        "purpose": "The final stage is a holistic quality audit before code enters the main branch. This covers code quality, architecture fit, performance, security, and maintainability.",
+        "humanRole": "I perform the final code review, assess architecture alignment, check for technical debt, ensure documentation is updated, and approve the merge.",
+        "aiRole": "The AI provides automated code review feedback, suggests improvements, checks for security issues, and validates coding standards compliance.",
+        "inputs": ["Completed implementation", "Test results", "Review checklist", "Architecture guidelines"],
+        "outputs": ["Approved pull request", "Review notes", "Documentation updates", "Lessons learned for future cycles"],
+        "decisions": ["Is this merge-ready?", "What technical debt is acceptable?", "Does the implementation scale?", "Is the documentation sufficient?"],
+        "prevents": ["Poor code quality entering the codebase", "Architecture inconsistencies", "Missing documentation", "Knowledge silos"],
+        "whyMatters": "This is the final human gate. Every line of code that reaches production has been planned, executed with AI assistance, verified, and reviewed by me."
       }
     },
-    "human": {
-      "sectionNum": "03",
-      "sectionTitle": "HUMAN OVERSIGHT & IDENTITY",
-      "sectionSubtitle": "Emphasizes human judgment, domain expertise, and absolute ownership over the final output.",
-      "validation": {
-        "title": "Human Validation & Problem Solving",
-        "quote": "\"Reviewing logic isn't just about catching bugs; it's about ensuring the architectural vision remains cohesive and fine-tuning implementation for scale.\"",
-        "desc": "Manually reviewing results, understanding code logic, addressing complex issues the AI agent might encounter, and fine-tuning implementation to achieve true productivity."
-      },
-      "whoiam": {
-        "title": "Who I Am (Developer Behind the Workflow)",
-        "desc": "These tools are not a replacement for my programming skills, but rather a means to increase productivity. I am a developer capable of writing code and possessing a deep understanding of systems. I use AI as an accelerator for the development process, not as a substitute for genuine programming expertise."
-      }
+    "humanVsAI": {
+      "phaseLabel": "PHASE",
+      "title": "Human vs AI Responsibility",
+      "humanTitle": "My Responsibility",
+      "aiTitle": "AI's Role",
+      "rows": [
+        { "phase": "Planning", "human": "Define scope, write execution brief, set acceptance criteria", "ai": "Analyze brief, confirm understanding, identify risks" },
+        { "phase": "Context Prep", "human": "Curate context, configure skills, write prompts", "ai": "Ingest context, map dependencies, prepare environment" },
+        { "phase": "Execution", "human": "Review output, guide decisions, approve or reject", "ai": "Generate code per spec, follow patterns, flag ambiguities" },
+        { "phase": "Verification", "human": "Verify edge cases, check regressions, sign off", "ai": "Run tests, validate spec, report failures" },
+        { "phase": "Review", "human": "Final code review, assess architecture, approve merge", "ai": "Automated review, suggest improvements, check compliance" }
+      ]
+    },
+    "whyItWorks": {
+      "title": "Why This Workflow Works",
+      "cards": [
+        { "icon": "Zap", "title": "Speed Without Chaos", "desc": "AI generates code exponentially faster than manual writing, but the spec-driven structure prevents the chaos of random generation. You get velocity with direction." },
+        { "icon": "Shield", "title": "Quality Through Process", "desc": "Each stage has explicit quality gates. Planning defines done. Verification validates it. Review audits it. Quality is engineered into the process, not hoped for." },
+        { "icon": "Brain", "title": "Human Judgment at Every Gate", "desc": "AI never makes unsupervised decisions. Every output is reviewed, every architectural choice is mine. The agent accelerates — I decide." },
+        { "icon": "GitBranch", "title": "Context That Compounds", "desc": "Each cycle feeds into the next. The more context you build, the better the AI performs. Over time, the agent learns your patterns, preferences, and codebase." },
+        { "icon": "EyeOff", "title": "Full Ownership, Zero Surrender", "desc": "I remain the sole author of the final product. AI is a tool in my toolkit — not a co-pilot, not a replacement. Every line shipped is mine to own and maintain." }
+      ]
+    },
+    "exampleFlow": {
+      "taskLabel": "TASK",
+      "title": "Example: Adding a Feature",
+      "task": "Add a theme toggle (dark/light mode) to the portfolio — respecting system preference and persisting user choice.",
+      "stages": [
+        { "stage": "Planning", "action": "Define scope: toggle UI, CSS variables, localStorage persistence, system preference detection" },
+        { "stage": "Context Prep", "action": "Share existing globals.css, layout.tsx, theme-related utilities, and the Tailwind config" },
+        { "stage": "Execution", "action": "AI generates the toggle component, CSS variable swap logic, and integration into the layout" },
+        { "stage": "Verification", "action": "Check: toggle works, preference persists, system theme is detected, no visual regressions" },
+        { "stage": "Review", "action": "Review component structure, CSS approach, accessibility (contrast), and merge" }
+      ]
     }
   }
 }

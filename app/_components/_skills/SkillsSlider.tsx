@@ -19,7 +19,7 @@ export default function SkillsSlider() {
         {[...skills, ...skills].map((skill, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 px-6 py-3 rounded-full"
+            className="flex items-center gap-3 px-6 py-3"
           >
             <Image
               src={skill.icon}

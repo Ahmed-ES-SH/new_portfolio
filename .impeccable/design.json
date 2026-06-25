@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-25T00:00:00Z",
+  "title": "Design System: Ahmed Ismail Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Terminal Cyan",
+        "canonical": "oklch(0.88 0.19 196)",
+        "tonalRamp": ["oklch(0.15 0.19 196)", "oklch(0.25 0.19 196)", "oklch(0.38 0.19 196)", "oklch(0.52 0.19 196)", "oklch(0.65 0.19 196)", "oklch(0.78 0.19 196)", "oklch(0.88 0.19 196)", "oklch(0.95 0.19 196)"]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Surface Dark",
+        "canonical": "oklch(0.07 0.005 250)",
+        "tonalRamp": ["oklch(0.02 0.005 250)", "oklch(0.04 0.005 250)", "oklch(0.07 0.005 250)", "oklch(0.10 0.005 250)", "oklch(0.14 0.005 250)", "oklch(0.18 0.005 250)", "oklch(0.22 0.005 250)", "oklch(0.28 0.005 250)"]
+      },
+      "text-body": {
+        "role": "neutral",
+        "displayName": "Body Text",
+        "canonical": "oklch(0.65 0.02 250)",
+        "tonalRamp": ["oklch(0.20 0.02 250)", "oklch(0.30 0.02 250)", "oklch(0.40 0.02 250)", "oklch(0.50 0.02 250)", "oklch(0.60 0.02 250)", "oklch(0.70 0.02 250)", "oklch(0.80 0.02 250)", "oklch(0.90 0.02 250)"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only. All-caps or title-case. Tight tracking (-0.03em)."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Section titles, modal headers, card titles. All-caps recommended."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, descriptions, long-form content. Cap at 65-75ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Status badges, nav links, button text, metadata, section markers."
+      }
+    },
+    "shadows": [
+      { "name": "neon-border-glow", "value": "0 0 15px rgba(0, 240, 255, 0.4)", "purpose": "Applied on hover to interactive elements with neon-border. Evokes CRT power-on." },
+      { "name": "terminal-drop-shadow", "value": "0 -5px 20px rgba(0, 240, 255, 0.15)", "purpose": "Terminal module top shadow for physical panel illusion." },
+      { "name": "mobile-nav-glow", "value": "0 -10px 30px rgba(0, 245, 228, 0.15)", "purpose": "Bottom mobile nav bar ambient glow." },
+      { "name": "inner-neon", "value": "inset 0 0 5px rgba(0, 240, 255, 0.2)", "purpose": "Inner glow for neon-border elements." }
+    ],
+    "motion": [
+      { "name": "ease-state", "value": "cubic-bezier(0.25, 0.1, 0.25, 1)", "purpose": "Default easing for state transitions (hover, focus)." },
+      { "name": "ease-enter", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing for entrance animations (fade in, slide up)." },
+      { "name": "duration-state", "value": "300ms", "purpose": "Standard state transition duration." },
+      { "name": "duration-enter", "value": "400ms", "purpose": "Standard entrance animation duration." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled cyan primary CTA button. Used for main actions: 'EXECUTE', 'GET STARTED', primary nav links.",
+      "html": "<button class=\"ds-btn-primary\">EXECUTE MODULE</button>",
+      "css": ".ds-btn-primary { background: #00f0ff; color: #000; font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.75rem; font-weight: 900; line-height: 1; letter-spacing: 0.3em; text-transform: uppercase; padding: 16px 40px; border: 1px solid #00f0ff; border-radius: 0; cursor: pointer; transition: all 300ms ease; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 5px rgba(0, 240, 255, 0.2); } .ds-btn-primary:hover { background: transparent; color: #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), inset 0 0 8px rgba(0, 240, 255, 0.3); } .ds-btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outlined Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outlined secondary CTA button. Used for secondary actions: 'LIVE DEMO', language toggle.",
+      "html": "<button class=\"ds-btn-outline\">LIVE DEMO</button>",
+      "css": ".ds-btn-outline { background: transparent; color: #00f0ff; font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.75rem; font-weight: 900; line-height: 1; letter-spacing: 0.3em; text-transform: uppercase; padding: 16px 40px; border: 1px solid #00f0ff; border-radius: 0; cursor: pointer; transition: all 300ms ease; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 5px rgba(0, 240, 255, 0.2); } .ds-btn-outline:hover { background: #00f0ff; color: #000; box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), inset 0 0 8px rgba(0, 240, 255, 0.3); } .ds-btn-outline:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Terminal Badge",
+      "kind": "chip",
+      "refersTo": "status-badge",
+      "description": "Small inline status badge with pulsing indicator dot. Used for section headers and status labels.",
+      "html": "<div class=\"ds-badge\"><span class=\"ds-badge-dot\"></span><span class=\"ds-badge-text\">SYSTEM_ACTIVE</span></div>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border: 1px solid rgba(0, 240, 255, 0.5); background: rgba(0, 240, 255, 0.05); } .ds-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #00f0ff; animation: ds-pulse 2s ease-in-out infinite; } @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } } .ds-badge-text { font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.625rem; font-weight: 900; letter-spacing: 0.3em; text-transform: uppercase; color: #00f0ff; } .ds-badge:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Top bar navigation link with underline-on-active treatment.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">ABOUT</a>",
+      "css": ".ds-nav-link { font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.75rem; font-weight: 900; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(0, 240, 255, 0.8); text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; transition: all 200ms ease; cursor: pointer; } .ds-nav-link:hover { color: #00f0ff; border-bottom-color: #00f0ff; } .ds-nav-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-nav-link.active { color: #00f0ff; border-bottom-color: #00f0ff; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "chip",
+      "refersTo": "chip-tag",
+      "description": "Technology stack tag used inside project cards and skill grids.",
+      "html": "<span class=\"ds-tag\">Next.js</span>",
+      "css": ".ds-tag { display: inline-block; padding: 4px 8px; background: #0f172a; border: 1px solid rgba(0, 240, 255, 0.2); font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.625rem; font-weight: 700; color: #00f0ff; text-transform: uppercase; white-space: nowrap; line-height: 1; }"
+    },
+    {
+      "name": "Stat Panel",
+      "kind": "card",
+      "refersTo": "card-project-stats",
+      "description": "Statistics info panel used in project cards. Two-column key-value layout with left cyan border.",
+      "html": "<div class=\"ds-stat-panel\"><div class=\"ds-stat-row\"><span class=\"ds-stat-key\">TECH STACK</span><span class=\"ds-stat-value\">React / Node</span></div><div class=\"ds-stat-row\"><span class=\"ds-stat-key\">STATUS</span><span class=\"ds-stat-value ds-stat-danger\">PRIVATE</span></div></div>",
+      "css": ".ds-stat-panel { background: rgba(15, 23, 42, 0.8); border-left: 2px solid #00f0ff; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-family: 'IBM Plex Mono', 'Cairo', monospace; font-size: 0.75rem; } .ds-stat-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; } .ds-stat-key { color: #64748b; text-transform: uppercase; font-size: 0.625rem; letter-spacing: 0.05em; } .ds-stat-value { color: #00f0ff; font-weight: 700; text-transform: uppercase; font-size: 0.625rem; } .ds-stat-danger { color: #f59e0b; }"
+    },
+    {
+      "name": "TerminalPrompt",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Terminal command input line with system prompt prefix and blinking caret.",
+      "html": "<div class=\"ds-terminal-line\"><span class=\"ds-prompt\">~:ahmedismaildev/admin:/ $</span><input class=\"ds-terminal-input\" type=\"text\" value=\"\" placeholder=\"\" aria-label=\"Terminal input\" /></div>",
+      "css": ".ds-terminal-line { display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 0.875rem; } .ds-prompt { color: #00f0ff; text-shadow: 0 0 12px rgba(0, 240, 255, 0.6); white-space: pre; flex-shrink: 0; } .ds-terminal-input { background: transparent; border: none; outline: none; color: #fff; font-family: 'IBM Plex Mono', monospace; font-size: 0.875rem; width: 100%; caret-color: #00f0ff; } .ds-terminal-input:focus-visible { outline: none; }"
+    },
+    {
+      "name": "Progress Bar",
+      "kind": "custom",
+      "refersTo": "progress-bar",
+      "description": "Thin horizontal progress bar with cyan fill. Used inside floating stat panels in the hero section.",
+      "html": "<div class=\"ds-progress-track\"><div class=\"ds-progress-fill\" style=\"width: 75%\"></div></div>",
+      "css": ".ds-progress-track { height: 4px; width: 100%; background: rgba(0, 240, 255, 0.2); } .ds-progress-fill { height: 100%; background: #00f0ff; transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Developer Terminal",
+    "overview": "A dark industrial interface that feels like a mission-control console for a precision engineering operation. The aesthetic is cyberpunk refined — retaining the neon-cyan pulse of the original direction but stripped of gimmicks. Scanlines and flicker become rare, earned effects rather than default decoration. Every visual element reads as functional: status indicators, system prompts, terminal modules, grid overlays. The monitor glow is not decoration — it's the interface's own voice.\n\nThis system explicitly rejects corporate template sterility, generic developer-portfolio patterns (overused terminal themes, blue-on-white gradients), and any surface that feels loud without purpose. The confidence comes from precision, not from volume.",
+    "keyCharacteristics": [
+      "Dark-on-dark with high-contrast cyan accent as the single voice",
+      "Monospaced typography throughout — IBM Plex Mono as the system font",
+      "Grid-based backgrounds that evoke engineering blueprints and HUD displays",
+      "Sharp, zero-radius corners on containers; right angles as the default",
+      "Functional decorations: status badges, progress bars, corner brackets, system labels",
+      "Motion as feedback, not as ornament"
+    ],
+    "rules": [
+      { "name": "The Cyan Ceiling Rule", "body": "The primary cyan accent occupies no more than 15% of any viewport. Its rarity is the point — when cyan appears (border, text glow, progress bar), it signals something active or interactive.", "section": "colors" },
+      { "name": "The No-Warmth Rule", "body": "The palette contains zero warm tones. No beige, amber, orange, or brown. The system is deliberately cool.", "section": "colors" },
+      { "name": "The Single Family Rule", "body": "All text uses IBM Plex Mono (or Cairo for Arabic). No second font family enters the system.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest — no shadow, no elevation. Glow appears only as a response to state (hover, focus, active).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use IBM Plex Mono for all text. No other font family enters the system.",
+      "Do use pure black (#000000) for card containers — the void effect is intentional.",
+      "Do keep cyan accent below 15% of any viewport. Rarity signals interactivity.",
+      "Do use sharp zero-radius corners on all containers. Right angles reinforce the industrial identity.",
+      "Do use text-wrap: balance on h1–h3 and text-wrap: pretty on body prose.",
+      "Do add prefers-reduced-motion fallbacks to every animation (instant reveal or crossfade).",
+      "Do maintain 4.5:1 minimum contrast for body text.",
+      "Do cap body line length at 65–75ch.",
+      "Do use progress bars and status indicators as functional decoration — not ornament."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text with a gradient).",
+      "Don't add side-stripe borders on cards or callouts.",
+      "Don't default to glassmorphism.",
+      "Don't use numbered section markers across every page.",
+      "Don't put the tiny uppercase tracked eyebrow above every section heading.",
+      "Don't use hero-metric templates.",
+      "Don't use monospace as a lazy shorthand for 'developer.'",
+      "Don't make cards identical across the site.",
+      "Don't animate layout properties.",
+      "Don't use bounce or elastic easings.",
+      "Don't let text overflow its container."
+    ]
+  }
+}

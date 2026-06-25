@@ -24,7 +24,7 @@ export default function SkillsHeroSection({ t }: SkillsHeroSectionProps) {
         {/* Header Badges */}
         <div className="inline-flex items-center gap-3 border border-(--primary,#00f0ff)/50 bg-(--primary,#00f0ff)/5 px-4 py-1.5 mb-8 self-start">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-(--primary,#00f0ff) opacity-75"></span>
+            <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-(--primary,#00f0ff) opacity-75 motion-reduce:opacity-100"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-(--primary,#00f0ff)"></span>
           </span>
           <span className="text-(--primary,#00f0ff) text-xs font-black tracking-[0.3em] uppercase">
@@ -34,7 +34,7 @@ export default function SkillsHeroSection({ t }: SkillsHeroSectionProps) {
 
         {/* Title */}
         <div className="space-y-2 mb-6 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-black text-slate-100 uppercase italic ibm-plex-mono-bold-italic">
+          <h1 className="text-4xl md:text-6xl font-black text-slate-100 uppercase italic ibm-plex-mono-bold-italic text-wrap-balance">
             {t?.title?.split(" ")[0]} <br />
             <span className="text-(--primary,#00f0ff) neon-text">
               {t?.title?.split(" ").slice(1).join(" ")}
@@ -47,7 +47,8 @@ export default function SkillsHeroSection({ t }: SkillsHeroSectionProps) {
           <div className="flex flex-col items-end">
             <AnimatePresence>
               <motion.p
-                animate={{ height: readMore ? "auto" : 120 }}
+                id="skills-description"
+                animate={{ maxHeight: readMore ? 500 : 120 }}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
                 className="overflow-hidden text-slate-400 max-md:text-sm font-medium leading-relaxed tracking-tight"
               >
@@ -56,6 +57,8 @@ export default function SkillsHeroSection({ t }: SkillsHeroSectionProps) {
             </AnimatePresence>
             <button
               onClick={() => setReadMore(!readMore)}
+              aria-expanded={readMore}
+              aria-controls="skills-description"
               className="text-(--primary,#00f0ff) text-xs hover:underline whitespace-nowrap font-black tracking-[0.3em] uppercase"
             >
               {readMore ? t.readLess : t.readMore}

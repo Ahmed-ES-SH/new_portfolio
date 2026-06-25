@@ -16,9 +16,9 @@ export function HeroSection() {
         <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-accent-blue/10 rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="grid lg:grid-cols-12 gap-12 w-full relative z-20">
+      <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 w-full relative z-20">
         {/* Left Content Column */}
-        <div className="lg:col-span-7 flex flex-col justify-center items-start space-y-10 order-2 lg:order-1  max-md:w-[105%]">
+        <div className="lg:col-span-7 flex flex-col justify-center items-start space-y-10 order-2 lg:order-1">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent-blue/50 bg-accent-blue/5">
               <span className="size-2 bg-(--color-accent-blue) animate-pulse"></span>
@@ -29,7 +29,7 @@ export function HeroSection() {
 
             <AnimateText hero={hero} />
 
-            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-xl font-light tracking-wide border-s-2 border-(--color-accent-blue) ps-6 bg-(--color-accent-blue)/5 py-4">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-xl font-light tracking-wide bg-(--color-accent-blue)/5 px-6 py-4 border border-(--color-accent-blue)/20">
               {hero.subtitlePrimary}{" "}
               <span className="text-white font-medium">
                 {hero.subtitleHighlight}
@@ -55,8 +55,8 @@ export function HeroSection() {
         </div>
 
         {/* Right Illustration Column */}
-        <div className="lg:col-span-5 relative flex items-center justify-center order-1 lg:order-2 max-md:w-[85%] mx-auto w-full">
-          <div className="relative w-full aspect-4/5 max-w-md group">
+        <div className="lg:col-span-5 relative flex items-center justify-center order-1 lg:order-2 w-full">
+          <div className="relative w-full aspect-[3/4] sm:aspect-4/5 max-w-md group">
             <div className="relative w-full h-full overflow-hidden">
               {/* Back layered Image */}
               <div className="absolute inset-0 translate-x-4 opacity-40 mix-blend-screen overflow-hidden">
@@ -82,9 +82,9 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Floating Statistic Boxes */}
-            <div className="absolute -left-6 sm:-left-12 top-0 bottom-0 flex flex-col justify-between py-12 z-40">
-              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 transition-transform hover:-translate-x-2">
+            {/* Floating Statistic Boxes — side on desktop, row below on mobile */}
+            <div className="lg:absolute -left-6 lg:-left-12 top-0 bottom-0 flex lg:flex-col max-lg:flex-row max-lg:mt-4 max-lg:gap-3 justify-between lg:py-12 z-40">
+              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 transition-transform hover:-translate-x-2 max-lg:flex-1">
                 <div className="text-xl sm:text-2xl font-black text-white pixel-flicker">
                   {hero.stats.reliability.value}
                 </div>
@@ -96,7 +96,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 translate-x-4 transition-transform hover:translate-x-6">
+              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 lg:translate-x-4 transition-transform lg:hover:translate-x-6 max-lg:flex-1">
                 <div className="text-xl sm:text-2xl font-black text-white pixel-flicker">
                   {hero.stats.integrations.value}
                 </div>
@@ -108,7 +108,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 transition-transform hover:-translate-x-2">
+              <div className="p-3 sm:p-4 bg-black/80 border border-primary/40 backdrop-blur-xl w-32 sm:w-40 transition-transform hover:-translate-x-2 max-lg:flex-1">
                 <div className="text-xl sm:text-2xl font-black text-white pixel-flicker">
                   {hero.stats.latency.value}
                 </div>
@@ -138,15 +138,17 @@ export function HeroSection() {
               {hero.coordInfo.status}
             </div>
 
-            {/* Decorative Floating Mascot Element */}
-            <div className="absolute -bottom-10 -right-10 sm:-bottom-16 sm:-right-16 w-40 h-40 sm:w-56 sm:h-56 z-50">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzr9Ha-PjBN28pUjbRvZ8rTWQ4Q8-F952exJTHA2SVERxkq4ClQflKn7uOAl8qepAg2Ux_XybJ1MtXH50SZq9VDM5GIjy5fwkUxTRbhiseNXUSrVVkKqhMCQiYdAqPYcESap8UeWEsYrOVZx_wPrLxVj7PW6S-u-vu2XMtJb9iqqKI_xiJlyn6t8wVvc6QM6DcJKJly9WEUteivMsjE3F18YPbn_OxDvNXmjwrCKegIHXfg2AoMx0sZvpyFILpboA835m5sDkxBk8"
-                alt="Floating tech mascot"
-                fill
-                className="object-contain drop-shadow-[0_0_20px_rgba(0,240,255,0.6)] animate-bounce [animation-duration:4s]"
-                unoptimized
-              />
+            {/* Decorative terminal node icon */}
+            <div className="hidden sm:block absolute -bottom-16 -right-16 w-56 h-56 z-50 pointer-events-none animate-[float_6s_ease-in-out_infinite]">
+              <svg viewBox="0 0 120 120" fill="none" className="w-full h-full drop-shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+                <circle cx="60" cy="60" r="28" stroke="var(--color-accent-blue)" strokeWidth="1.5" opacity="0.6"/>
+                <circle cx="60" cy="60" r="14" stroke="var(--color-accent-blue)" strokeWidth="1" opacity="0.4"/>
+                <circle cx="60" cy="60" r="3" fill="var(--color-accent-blue)" opacity="0.8"/>
+                <line x1="60" y1="32" x2="60" y2="16" stroke="var(--color-accent-blue)" strokeWidth="1" opacity="0.5"/>
+                <line x1="60" y1="88" x2="60" y2="104" stroke="var(--color-accent-blue)" strokeWidth="1" opacity="0.5"/>
+                <line x1="32" y1="60" x2="16" y2="60" stroke="var(--color-accent-blue)" strokeWidth="1" opacity="0.5"/>
+                <line x1="88" y1="60" x2="104" y2="60" stroke="var(--color-accent-blue)" strokeWidth="1" opacity="0.5"/>
+              </svg>
             </div>
           </div>
         </div>

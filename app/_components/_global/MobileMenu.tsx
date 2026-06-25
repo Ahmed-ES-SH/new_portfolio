@@ -1,6 +1,6 @@
 "use client";
 
-import { LayoutGrid, Cpu, User2, TableProperties } from "lucide-react";
+import { LayoutGrid, Cpu, User2, TableProperties, GitCompare } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useLocale } from "@/app/hooks/useLocale";
 import LocaleLink from "./LocaleLink";
@@ -44,6 +44,12 @@ export default function MobileMenu() {
       icon: <TableProperties className="size-6" />,
       href: "/projects",
       label: "Projects",
+      type: "link",
+    },
+    {
+      icon: <GitCompare className="size-6" />,
+      href: "/explain",
+      label: "Workflow",
       type: "link",
     },
   ];

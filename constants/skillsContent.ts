@@ -1,4 +1,5 @@
 export const skills = [
+  // ===== FRONTEND =====
   {
     icon: "/icons/Next.js.png",
     title: { ar: "Next-js", en: "Next-js" },
@@ -21,17 +22,6 @@ export const skills = [
     desc: {
       ar: "متخصص في بناء تطبيقات Node.js متطورة وقابلة للتوسع باستخدام TypeScript، مع التركيز على المعمارية المنظمة والبرمجيات الوسيطة.",
       en: "Specialized in building scalable, enterprise-grade Node.js applications using TypeScript, focusing on modular architecture and robust backend logic.",
-    },
-  },
-  {
-    icon: "/icons/programmer.png", // يمكنك استخدام أيقونة تعبر عن الذكاء الاصطناعي مع الكود
-    title: {
-      ar: "تطوير مدعوم بالذكاء الاصطناعي",
-      en: "AI-Powered Development",
-    },
-    desc: {
-      ar: "خبير في تسريع دورة حياة البرمجيات (SDLC) باستخدام أدوات الذكاء الاصطناعي؛ من تخطيط المهام عبر Spec Kits، إلى استخدام أدوات CLI مثل Google Claude Code، والمراجعة الآلية للكود عبر CodeRabbit.",
-      en: "Expert in accelerating SDLC using AI tools; from task planning with Spec Kits and utilizing Cloud/Gemini CLIs, to automated code auditing and reviews with CodeRabbit.",
     },
   },
   {
@@ -98,41 +88,6 @@ export const skills = [
       en: "Expertise in JavaScript to create interactive and user-friendly web experiences.",
     },
   },
-
-  {
-    icon: "/icons/social.png",
-    title: { ar: "Git", en: "Git" },
-    desc: {
-      ar: "متمكن من Git لإدارة النسخ البرمجية والتعاون الفعال في المشاريع.",
-      en: "Proficient in Git version control to manage codebases and collaborate effectively.",
-    },
-  },
-  {
-    icon: "/icons/command-line.png",
-    title: { ar: "Command Line", en: "Command Line" },
-    desc: {
-      ar: "مرتبط باستخدام أدوات سطر الأوامر لتحسين سير العمل وأتمتة المهام.",
-      en: "Comfortable using command line tools to improve workflow and automate tasks.",
-    },
-  },
-  {
-    icon: "/icons/github.png",
-    title: { ar: "GitHub", en: "GitHub" },
-    desc: {
-      ar: "خبرة في GitHub لاستضافة الأكواد وإدارة المشاريع والتعاون.",
-      en: "Experienced with GitHub for code hosting, collaboration, and project management.",
-    },
-  },
-  {
-    icon: "/icons/browser.png",
-    title: { ar: "RESTful APIs", en: "RESTful APIs" },
-    desc: {
-      ar: "مهارة في دمج واستهلاك واجهات برمجة التطبيقات لعرض البيانات الديناميكية.",
-      en: "Skilled in integrating and consuming APIs to fetch and display dynamic data efficiently.",
-    },
-  },
-
-  // المهارات الجديدة:
   {
     icon: "/icons/tan-stack.png",
     title: { ar: "TanStack Query", en: "TanStack Query" },
@@ -181,84 +136,165 @@ export const skills = [
       en: "Experienced in Bootstrap for fast, responsive design with a comprehensive CSS framework.",
     },
   },
-  {
-    icon: "/icons/agent-skills.png",
-    title: { ar: "Agent Skills", en: "Agent Skills" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/spec-kits.webp",
-    title: { ar: "Spec Kits", en: "Spec Kits" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/claude-logo.svg",
-    title: { ar: "Claude Code", en: "Claude Code" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/opencode-dark.webp",
-    title: { ar: "Open Code", en: "Open Code" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/gemini-ai.svg",
-    title: { ar: "Gemini CLI", en: "Gemini CLI" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/code-rabbit.svg",
-    title: { ar: "Code Rabbit", en: "Code Rabbit" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
-  {
-    icon: "/icons/Docker.png",
-    title: { ar: "Docker", en: "Docker" },
-    desc: {
-      ar: "",
-      en: "",
-    },
-  },
+
+  // ===== BACKEND =====
   {
     icon: "/icons/PostgresSQL.png",
     title: { ar: "PostgresSQL", en: "PostgresSQL" },
     desc: {
-      ar: "",
-      en: "",
+      ar: "خبرة في تصميم وإدارة قواعد بيانات PostgreSQL العلائقية للمشاريع الخلفية القابلة للتوسع.",
+      en: "Experienced in designing and managing PostgreSQL relational databases for scalable backend systems.",
     },
   },
   {
     icon: "/icons/Supabase-Icon--Streamline-Svg-Logos.svg",
     title: { ar: "Supabase", en: "Supabase" },
     desc: {
-      ar: "",
-      en: "",
+      ar: "خبرة في استخدام Supabase كمنصة backend-as-a-service توفر قاعدة بيانات، مصادقة، وتخزين للملفات.",
+      en: "Experienced with Supabase as an open-source backend-as-a-service providing database, authentication, and file storage.",
+    },
+  },
+
+  // ===== TOOLS =====
+  {
+    icon: "/icons/social.png",
+    title: { ar: "Git", en: "Git" },
+    desc: {
+      ar: "متمكن من Git لإدارة النسخ البرمجية والتعاون الفعال في المشاريع.",
+      en: "Proficient in Git version control to manage codebases and collaborate effectively.",
+    },
+  },
+  {
+    icon: "/icons/command-line.png",
+    title: { ar: "Command Line", en: "Command Line" },
+    desc: {
+      ar: "مرتبط باستخدام أدوات سطر الأوامر لتحسين سير العمل وأتمتة المهام.",
+      en: "Comfortable using command line tools to improve workflow and automate tasks.",
+    },
+  },
+  {
+    icon: "/icons/github.png",
+    title: { ar: "GitHub", en: "GitHub" },
+    desc: {
+      ar: "خبرة في GitHub لاستضافة الأكواد وإدارة المشاريع والتعاون.",
+      en: "Experienced with GitHub for code hosting, collaboration, and project management.",
+    },
+  },
+  {
+    icon: "/icons/browser.png",
+    title: { ar: "RESTful APIs", en: "RESTful APIs" },
+    desc: {
+      ar: "مهارة في دمج واستهلاك واجهات برمجة التطبيقات لعرض البيانات الديناميكية.",
+      en: "Skilled in integrating and consuming APIs to fetch and display dynamic data efficiently.",
+    },
+  },
+  {
+    icon: "/icons/Docker.png",
+    title: { ar: "Docker", en: "Docker" },
+    desc: {
+      ar: "خبرة في استخدام Docker لحاويات التطبيقات وتبسيط عملية النشر وضمان تناسق البيئات.",
+      en: "Experienced with Docker for containerizing applications, simplifying deployment and ensuring environment consistency.",
     },
   },
   {
     icon: "/icons/deployment.png",
     title: { ar: "Deployment", en: "Deployment" },
     desc: {
-      ar: "",
-      en: "",
+      ar: "مهارة في نشر التطبيقات على خوادم الإنتاج باستخدام خطوط CI/CD الحديثة ومنصات السحابة.",
+      en: "Skilled in deploying applications to production servers using modern CI/CD pipelines and cloud platforms.",
+    },
+  },
+
+  // ===== AI CAPABILITIES =====
+  {
+    icon: "/icons/programmer.png",
+    title: {
+      ar: "تطوير مدعوم بالذكاء الاصطناعي",
+      en: "AI-Assisted Development",
+    },
+    desc: {
+      ar: "دمج الذكاء الاصطناعي في جميع مراحل دورة حياة تطوير البرمجيات — من التخطيط والتصميم إلى توليد الكود والمراجعة والنشر — للوصول إلى الإنتاج بشكل أسرع دون التضحية بالجودة.",
+      en: "Integrating AI throughout the software development lifecycle — from planning and architecture to code generation, review, and deployment — to ship faster without compromising quality.",
+    },
+  },
+  {
+    icon: "/icons/ai.png",
+    title: {
+      ar: "تطوير قائم على المواصفات",
+      en: "Spec-Driven Development",
+    },
+    desc: {
+      ar: "منهجية منظّمة حيث تقود المواصفات التفصيلية عملية التنفيذ. أكتب مواصفات دقيقة قبل كتابة الكود، مما يمكّن وكلاء الذكاء الاصطناعي من توليد حلول دقيقة ومتوافقة مع متطلبات المشروع.",
+      en: "A structured methodology where detailed specifications drive implementation. I author precise specs before writing code, enabling AI agents to generate accurate, contextually-aligned solutions.",
+    },
+  },
+  {
+    icon: "/icons/agent-skills.png",
+    title: {
+      ar: "سير عمل وكيلائي",
+      en: "Agentic Workflows",
+    },
+    desc: {
+      ar: "تنسيق خطوط تطوير متعددة الوكلاء حيث يتعاون وكلاء الذكاء الاصطناعي في توليد الكود والمراجعة والتصحيح وإعادة الهيكلة تحت إشراف بشري — لزيادة الإنتاجية مع الحفاظ على التحكم.",
+      en: "Orchestrating multi-agent development pipelines where AI agents collaborate on code generation, review, debugging, and refactoring under human supervision — maximizing throughput while maintaining control.",
+    },
+  },
+
+  // ===== AI TOOLS =====
+  {
+    icon: "/icons/claude-logo.svg",
+    title: { ar: "Claude Code", en: "Claude Code" },
+    desc: {
+      ar: "أداة برمجية وكيلائية تعمل مباشرة في الطرفية، قادرة على فهم سياق قاعدة الكود بالكامل، وتوليد الميزات، وإعادة الهيكلة، والتصحيح من خلال محادثة باللغة الطبيعية.",
+      en: "An agentic AI coding tool that operates directly in the terminal, capable of understanding full codebase context, generating features, refactoring, and debugging through natural language conversation.",
+    },
+  },
+  {
+    icon: "/icons/gemini-ai.svg",
+    title: { ar: "Gemini CLI", en: "Gemini CLI" },
+    desc: {
+      ar: "أداة طرفية من جوجل مدعومة بالذكاء الاصطناعي لتوليد الكود وشرحه وتحويله، مدمجة مباشرة في سير عمل التطوير عبر سطر الأوامر.",
+      en: "Google's AI-powered terminal tool for code generation, explanation, and transformation — integrated directly into command-line development workflows.",
+    },
+  },
+  {
+    icon: "/icons/opencode-dark.webp",
+    title: { ar: "OpenCode", en: "OpenCode" },
+    desc: {
+      ar: "مساعد تطوير تفاعلي قائم على الطرفية مع وعي عميق بالمستودع، يتيح البرمجة وإعادة الهيكلة واستكشاف قاعدة الكود عبر اللغة الطبيعية.",
+      en: "An interactive terminal-based AI development assistant with deep repository awareness, enabling natural-language-driven coding, refactoring, and codebase exploration.",
+    },
+  },
+  {
+    icon: "/icons/code-rabbit.svg",
+    title: { ar: "CodeRabbit", en: "CodeRabbit" },
+    desc: {
+      ar: "مساعد مراجعة كود آلي مدعوم بالذكاء الاصطناعي يراجع طلبات السحب تلقائياً، ويحدد المشكلات، ويقدم اقتراحات سياقية — لتسريع جودة الكود دون عبء يدوي.",
+      en: "An AI-powered code review assistant that automatically reviews pull requests, identifies issues, and provides contextual suggestions — accelerating code quality without manual overhead.",
+    },
+  },
+  {
+    icon: "/icons/spec-kits.webp",
+    title: { ar: "Spec Kits", en: "Spec Kits" },
+    desc: {
+      ar: "قوالب مواصفات منظمة وأدوات لتحديد متطلبات تطوير دقيقة، مصممة لتغذية وكلاء الذكاء الاصطناعي بسياق واضح وقابل للتنفيذ لتطبيق دقيق.",
+      en: "Structured specification templates and tooling for defining precise development requirements, designed to feed AI agents with clear, actionable context for accurate implementation.",
+    },
+  },
+  {
+    icon: "/icons/pi-coding-agent.png",
+    title: { ar: "PI Coding", en: "PI Coding" },
+    desc: {
+      ar: "وكيل برمجي مع وعي عميق بقاعدة الكود يعمل في الطرفية، قادر على تصحيح الأخطاء وتنفيذ الميزات والتنقل في قاعدة الكود بشكل مستقل.",
+      en: "An AI coding agent with deep repository context that operates in the terminal, capable of autonomous debugging, feature implementation, and codebase navigation.",
+    },
+  },
+  {
+    icon: "/icons/antigravity-color.png",
+    title: { ar: "Antigravity CLI", en: "Antigravity CLI" },
+    desc: {
+      ar: "أداة سطر أوامر إنتاجية تؤتمت سير العمل التطويري الشائع وهيكلة المشاريع عبر توليد أوامر وتنسيق مهام مدعوم بالذكاء الاصطناعي.",
+      en: "A productivity CLI tool that automates common development workflows and project scaffolding through AI-powered command generation and task orchestration.",
     },
   },
 ];
@@ -269,10 +305,10 @@ export const frontendSkills = [
   "React",
   "TS",
   "JS",
-  "HTML",
-  "CSS",
   "Tailwind CSS",
   "Bootstrap",
+  "HTML",
+  "CSS",
   "TanStack Query",
   "zustand",
   "redux-toolkit",
@@ -300,12 +336,18 @@ export const toolsSkills = [
   "Deployment",
 ];
 
-export const aiSkills = [
-  "AI-Powered Development",
-  "Agent Skills",
-  "Spec Kits",
+export const aiCapabilities = [
+  "AI-Assisted Development",
+  "Spec-Driven Development",
+  "Agentic Workflows",
+];
+
+export const aiTools = [
   "Claude Code",
-  "Open Code",
   "Gemini CLI",
-  "Code Rabbit",
+  "OpenCode",
+  "CodeRabbit",
+  "Spec Kits",
+  "PI Coding",
+  "Antigravity CLI",
 ];

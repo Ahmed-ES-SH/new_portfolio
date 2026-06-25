@@ -30,6 +30,10 @@ export function Navbar() {
       label: navbar.links.projects,
       href: "/projects",
     },
+    {
+      label: navbar.links.explain,
+      href: "/explain",
+    },
   ];
 
   return (

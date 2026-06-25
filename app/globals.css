@@ -343,6 +343,11 @@ button:disabled {
   animation: flicker 5s infinite step-end;
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 .data-stream-segment {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

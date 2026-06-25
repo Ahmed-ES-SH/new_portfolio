@@ -4,9 +4,10 @@ import {
   frontendSkills,
   backendSkills,
   toolsSkills,
-  aiSkills,
+  aiCapabilities,
+  aiTools,
 } from "@/constants/skillsContent";
-import { SkillCard } from "../../_components/_skills/SkillCard";
+import { SkillCard, type CategoryId } from "../../_components/_skills/SkillCard";
 import { getServerTranslation } from "@/app/helpers/serverTranslation";
 import { directionMap } from "@/constants/global";
 import SkillsHeroSection from "../../_components/_skills/SkillsHeroSection";
@@ -45,7 +46,7 @@ export default async function SkillsPage({ params }: PageProps) {
       .filter((s): s is (typeof skills)[0] => s !== undefined);
   };
 
-  const categories = [
+  const categories: { id: CategoryId; label: string; data: (typeof skills)[0][] }[] = [
     {
       id: "frontend",
       label: t?.tabs?.frontend || "Frontend",
@@ -57,9 +58,14 @@ export default async function SkillsPage({ params }: PageProps) {
       data: mapSkillData(backendSkills),
     },
     {
-      id: "ai",
-      label: t?.tabs?.ai || "AI-Powered Development",
-      data: mapSkillData(aiSkills),
+      id: "ai-capabilities",
+      label: t?.tabs?.aiCapabilities || "AI Capabilities",
+      data: mapSkillData(aiCapabilities),
+    },
+    {
+      id: "ai-tools",
+      label: t?.tabs?.aiTools || "AI Tooling",
+      data: mapSkillData(aiTools),
     },
     {
       id: "tools",
@@ -74,7 +80,7 @@ export default async function SkillsPage({ params }: PageProps) {
       className="relative min-h-screen  flex flex-col bg-black/70 overflow-hidden"
     >
       <SkillsBackGround />
-      {/* Background Grids and Overlays (Consistent with SkillsSection) */}
+      {/* Background Grid */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -84,7 +90,6 @@ export default async function SkillsPage({ params }: PageProps) {
         }}
       />
       <div className="absolute inset-0 bg-linear-to-t from-(--bg-base,#0d0f10) via-transparent to-transparent z-0" />
-      <div className="absolute inset-0 scanline-overlay z-0" />
 
       {/* Hero Section */}
       <div className="pt-32 pb-8">
@@ -97,16 +102,10 @@ export default async function SkillsPage({ params }: PageProps) {
           <section key={category.id} className="flex flex-col gap-12">
             {/* Category Header with Decorative Line */}
             <div className="flex items-center gap-6">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-(--primary,#00f0ff) border-l-4 border-(--primary,#00f0ff) pl-6 neon-text">
+              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-widest text-(--primary,#00f0ff) text-wrap-balance neon-text">
                 {category.label}
               </h2>
-              <div
-                className="grow h-[2px] bg-linear-to-r from-(--primary,#00f0ff) to-transparent"
-                style={{
-                  boxShadow:
-                    "0 0 12px var(--primary,#00f0ff), 0 0 20px rgba(0, 240, 255, 0.5)",
-                }}
-              />
+              <div className="grow h-[2px] bg-linear-to-r from-(--primary,#00f0ff) to-transparent" />
             </div>
 
             {/* Skills Grid */}
@@ -116,7 +115,7 @@ export default async function SkillsPage({ params }: PageProps) {
                   key={`${category.id}-${skill.title.en}-${idx}`}
                   className="h-full"
                 >
-                  <SkillCard skill={skill} locale={locale} />
+                  <SkillCard skill={skill} locale={locale} categoryId={category.id} />
                 </div>
               ))}
             </div>
