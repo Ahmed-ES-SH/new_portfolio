@@ -17,7 +17,7 @@ export function ExplainPageShell({ locale, children }: ExplainPageShellProps) {
   return (
     <main
       dir={directionMap[locale] || "ltr"}
-      className="relative min-h-screen flex flex-col text-slate-100 overflow-hidden"
+      className="relative min-h-screen flex flex-col text-slate-100"
     >
       {/* Subtle Grid Background */}
       <div

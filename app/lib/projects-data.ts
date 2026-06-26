@@ -25,7 +25,7 @@ export const projectsConfig: Omit<Project, "images">[] = [
     },
     description: {
       en: "Sanad is a comprehensive full-stack service marketplace built with Next.js and NestJS, created to connect service providers with customers through one integrated platform. It includes service browsing and booking, cart management, secure payments with Stripe, real-time communication with Socket.io, blog and content management, notifications, user and admin dashboards, and full bilingual support for English and Arabic.",
-      ar: "ساناد هي منصة متكاملة لسوق الخدمات مبنية باستخدام Next.js وNestJS، وتهدف إلى ربط مقدمي الخدمات بالعملاء من خلال منصة واحدة متكاملة. تتضمن المنصة تصفح الخدمات وحجزها، وإدارة السلة، والمدفوعات الآمنة عبر Stripe، والتواصل الفوري عبر Socket.io، وإدارة المدونات والمحتوى، ونظام إشعارات كامل، ولوحات تحكم للمستخدمين والإدارة، مع دعم كامل للغتين العربية والإنجليزية.",
+      ar: "سند هي منصة متكاملة لسوق الخدمات مبنية باستخدام Next.js وNestJS، وتهدف إلى ربط مقدمي الخدمات بالعملاء من خلال منصة واحدة متكاملة. تتضمن المنصة تصفح الخدمات وحجزها، وإدارة السلة، والمدفوعات الآمنة عبر Stripe، والتواصل الفوري عبر Socket.io، وإدارة المدونات والمحتوى، ونظام إشعارات كامل، ولوحات تحكم للمستخدمين والإدارة، مع دعم كامل للغتين العربية والإنجليزية.",
     },
     skills: [
       "Next.js",
@@ -39,7 +39,7 @@ export const projectsConfig: Omit<Project, "images">[] = [
       "Socket.io",
       "Responsive Design",
     ],
-    projectCover: "/projects-covers/sanad-cover.webp",
+    projectCover: "/projects-covers/sanad-cover.png",
     linkSourceCode: "https://github.com/Ahmed-ES-SH/Frontend-Sanad",
     projectLink: "https://frontend-sanad.vercel.app",
     isPrivate: true,
@@ -54,7 +54,7 @@ export const projectsConfig: Omit<Project, "images">[] = [
     },
     description: {
       en: "Flick HQ is a full-stack entertainment discovery platform built with Next.js and NestJS, integrating the TMDb API to help users explore trending movies and TV shows. The platform features secure authentication with JWT and Google OAuth, Stripe-powered subscription billing, real-time updates via Pusher, and a stunning cinema-grade UI with full bilingual (English/Arabic) support. Users can manage personalized watch lists, browse content, and enjoy an immersive experience enhanced with smooth Framer Motion animations.",
-      ar: "Flick HQ هي منصة متكاملة لاكتشاف المحتوى الترفيهي مبنية بتقنية Full-Stack باستخدام Next.js و NestJS، وتتكاتل مع واجهة TMDb API لمساعدة المستخدمين على استكشاف الأفلام والبرامج التلفزيونية الرائجة. تتميز المنصة بتسجيل دخول آمن باستخدام JWT و Google OAuth، ونظام اشتراكات مدعوم من Stripe، وتحديثات فورية عبر Pusher، وواجهة سينمائية مذهلة تدعم اللغتين العربية والإنجليزية بشكل كامل. يمكن للمستخدمين إدارة قوائم المشاهدة الشخصية وتصفح المحتوى والاستمتاع بتجربة غامرة مع رسوم متحركة سلسة باستخدام Framer Motion.",
+      ar: "Flick HQ هي منصة متكاملة لاكتشاف المحتوى الترفيهي مبنية باستخدام Next.js و NestJS، وتتكامل مع واجهة TMDb API لمساعدة المستخدمين على استكشاف الأفلام والبرامج التلفزيونية الرائجة. تتميز المنصة بتسجيل دخول آمن باستخدام JWT و Google OAuth، ونظام اشتراكات مدعوم من Stripe، وتحديثات فورية عبر Pusher، وواجهة سينمائية مذهلة تدعم اللغتين العربية والإنجليزية بشكل كامل. يمكن للمستخدمين إدارة قوائم المشاهدة الشخصية وتصفح المحتوى والاستمتاع بتجربة غامرة مع رسوم متحركة سلسة باستخدام Framer Motion.",
     },
     skills: [
       "Next.js",
@@ -67,9 +67,9 @@ export const projectsConfig: Omit<Project, "images">[] = [
       "Stripe",
       "Responsive Design",
     ],
-    projectCover: "/projects-covers/flick-hq-cover.webp",
-    linkSourceCode: "https://github.com/Ahmed-ES-SH/TMDB-App",
-    projectLink: "https://tmdb-app-kappa.vercel.app",
+    projectCover: "/projects-covers/flick-hq-cover.png",
+    linkSourceCode: "https://github.com/Ahmed-ES-SH/FlickHQ-app",
+    projectLink: "https://flick-hq-app.vercel.app",
     isPrivate: false,
     categories: ["frontend", "backend", "fullstack"],
   },

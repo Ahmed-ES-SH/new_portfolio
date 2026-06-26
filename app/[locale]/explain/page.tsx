@@ -7,7 +7,7 @@ import { ExplainStageDetail } from "@/app/_components/_explain/ExplainStageDetai
 import { ExplainHumanVsAI } from "@/app/_components/_explain/ExplainHumanVsAI";
 import { ExplainWhyItWorks } from "@/app/_components/_explain/ExplainWhyItWorks";
 import { ExplainExampleFlow } from "@/app/_components/_explain/ExplainExampleFlow";
-import { ExplainStageNav } from "@/app/_components/_explain/ExplainStageNav";
+
 import { WORKFLOW_STAGES } from "@/constants/workflowStages";
 
 type Locale = "en" | "ar";
@@ -35,7 +35,6 @@ export default async function ExplainPage({
 
   return (
     <ExplainPageShell locale={locale}>
-      <ExplainStageNav />
       <ExplainWorkflowHero />
       <ExplainWorkflowOverview />
       {WORKFLOW_STAGES.map((stage, index) => (
