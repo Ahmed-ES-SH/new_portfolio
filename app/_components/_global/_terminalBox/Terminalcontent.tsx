@@ -51,6 +51,69 @@ export const GMAIL_ASCII = (
   </div>
 );
 
+// ASCII banner (used by `banner` command) ───────────────────────────────────
+export const BANNER_ASCII = (
+  <pre className="text-primary text-glow leading-tight text-xs sm:text-sm whitespace-pre">
+{`
+ █████╗ ██╗  ██╗████████╗███████╗██████╗ 
+██╔══██╗██║  ██║╚══██╔══╝██╔════╝██╔══██╗
+███████║███████║   ██║   █████╗  ██║  ██║
+██╔══██║██╔══██║   ██║   ██╔══╝  ██║  ██║
+██║  ██║██║  ██║   ██║   ███████╗██████╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝ 
+                                          
+██╗███████╗███╗   ███╗ █████╗ ██╗██╗     
+██║██╔════╝████╗ ████║██╔══██╗██║██║     
+██║███████╗██╔████╔██║███████║██║██║     
+██║╚════██║██║╚██╔╝██║██╔══██║██║██║     
+██║███████║██║ ╚═╝ ██║██║  ██║██║███████╗
+╚═╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+                                          
+██████╗ ███████╗██╗   ██╗
+██╔══██╗██╔════╝██║   ██║
+██║  ██║█████╗  ██║   ██║
+██║  ██║██╔══╝  ╚██╗ ██╔╝
+██████╔╝███████╗ ╚████╔╝ 
+╚═════╝ ╚══════╝  ╚═══╝  
+`}
+  </pre>
+);
+
+// Social links output (used by `social` command) ────────────────────────────
+export const SOCIAL_OUTPUT = (
+  <div className="space-y-2 mt-1">
+    <div className="text-primary text-glow tracking-wider">SOCIAL LINKS</div>
+    <div>
+      <span className="text-white/70">GitHub: </span>
+      <a
+        href="https://github.com/Ahmed-ES-SH"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary underline hover:text-white/90 transition-colors"
+      >
+        github.com/Ahmed-ES-SH
+      </a>
+    </div>
+    <div>
+      <span className="text-white/70">LinkedIn: </span>
+      <span className="text-white/50">(link pending)</span>
+    </div>
+    <div>
+      <span className="text-white/70">Email: </span>
+      <a
+        href="mailto:ahmedismaildev6@gmail.com"
+        className="text-primary underline hover:text-white/90 transition-colors"
+      >
+        ahmedismaildev6@gmail.com
+      </a>
+    </div>
+    <div>
+      <span className="text-white/70">CV: </span>
+      <span className="text-white/50">(coming soon)</span>
+    </div>
+  </div>
+);
+
 // Links ────────────────────────────────────────────────────────────────────
 export const links = [
   {
@@ -78,11 +141,11 @@ export const HELP_OUTPUT = (
   <div className="pl-2 space-y-1 mt-1">
     <div className="text-white/80 tracking-wider">AVAILABLE COMMANDS:</div>
     <div>
-      <span className="text-primary">/h, /help</span>
+      <span className="text-primary">help</span>
       <span className="text-white/50 ml-4">— Show this help menu</span>
     </div>
     <div>
-      <span className="text-primary">/nav [path]</span>
+      <span className="text-primary">nav [path]</span>
       <span className="text-white/50 ml-4">— Navigate to a page</span>
     </div>
     <div className="text-white/40 pl-4 text-xs">
@@ -93,16 +156,45 @@ export const HELP_OUTPUT = (
       ))}
     </div>
     <div>
-      <span className="text-primary">/contact</span>
+      <span className="text-primary">contact</span>
       <span className="text-white/50 ml-4">— Get contact information</span>
     </div>
     <div>
-      <span className="text-primary">clear</span>
+      <span className="text-primary">clear / cls</span>
       <span className="text-white/50 ml-4">— Clear the terminal history</span>
     </div>
     <div>
-      <span className="text-primary">close</span>
+      <span className="text-primary">close / exit</span>
       <span className="text-white/50 ml-4">— Close the terminal window</span>
+    </div>
+    <div className="mt-2 text-white/60 tracking-wider text-xs">ADDITIONAL COMMANDS:</div>
+    <div>
+      <span className="text-primary">history</span>
+      <span className="text-white/50 ml-4">— Show command history</span>
+    </div>
+    <div>
+      <span className="text-primary">whoami</span>
+      <span className="text-white/50 ml-4">— Display current user identity</span>
+    </div>
+    <div>
+      <span className="text-primary">date</span>
+      <span className="text-white/50 ml-4">— Show current date and time</span>
+    </div>
+    <div>
+      <span className="text-primary">echo [text]</span>
+      <span className="text-white/50 ml-4">— Echo input text</span>
+    </div>
+    <div>
+      <span className="text-primary">banner</span>
+      <span className="text-white/50 ml-4">— Display ASCII banner</span>
+    </div>
+    <div>
+      <span className="text-primary">social</span>
+      <span className="text-white/50 ml-4">— Show social links and contact info</span>
+    </div>
+    <div>
+      <span className="text-primary">repo [slug]</span>
+      <span className="text-white/50 ml-4">— Open a project&apos;s source code</span>
     </div>
   </div>
 );

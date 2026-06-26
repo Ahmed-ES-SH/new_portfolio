@@ -183,10 +183,57 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ── Terminal cursor blink ─────────────────────────────────────────────── */
+@keyframes blink-cursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 6px var(--color-primary);
+  vertical-align: text-bottom;
+  margin-right: 1px;
+  flex-shrink: 0;
+  pointer-events: none;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+/* ── Terminal thin scrollbar ───────────────────────────────────────────── */
+.terminal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) rgba(0, 240, 255, 0.06);
+}
+
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 240, 255, 0.06);
+}
+
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(0, 240, 255, 0.3);
 }
 
 button,
