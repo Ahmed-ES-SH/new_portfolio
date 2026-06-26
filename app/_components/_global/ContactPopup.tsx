@@ -59,7 +59,7 @@ export default function ContactPopup() {
       icon: <File className="size-5" />,
       image: "/cv_icon.webp",
       color: "#00f0ff",
-      link: "/Ahmed-Ismail-Resume.pdf",
+      link: "/Ahmed-Ismail.pdf",
       shadow: "shadow-[0_0_20px_rgba(0,240,255,0.3)]",
     },
   ];
