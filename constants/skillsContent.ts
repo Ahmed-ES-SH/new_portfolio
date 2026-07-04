@@ -250,14 +250,6 @@ export const skills = [
     },
   },
   {
-    icon: "/icons/gemini-ai.svg",
-    title: { ar: "Gemini CLI", en: "Gemini CLI" },
-    desc: {
-      ar: "أداة طرفية من جوجل مدعومة بالذكاء الاصطناعي لتوليد الكود وشرحه وتحويله، مدمجة مباشرة في سير عمل التطوير عبر سطر الأوامر.",
-      en: "Google's AI-powered terminal tool for code generation, explanation, and transformation — integrated directly into command-line development workflows.",
-    },
-  },
-  {
     icon: "/icons/opencode-dark.webp",
     title: { ar: "OpenCode", en: "OpenCode" },
     desc: {

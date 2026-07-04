@@ -76,21 +76,8 @@ export default function ContactPopup() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed w-full h-screen z-99999999 inset-0 flex items-center justify-center p-4"
+          className="fixed bg-black/50 backdrop-blur-lg w-full h-screen z-99999999 inset-0 flex items-center justify-center p-4"
         >
-          {/* Localized Grid Transition Effect */}
-
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => {
-              setIsPopupOpen(false);
-            }}
-            className="absolute inset-0 bg-black/80 backdrop-blur-md cursor-pointer"
-          />
-
           {/* Modal Container */}
 
           <motion.div
